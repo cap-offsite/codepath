@@ -1,0 +1,23 @@
+<section{% if section.anchorId %} id="{{ section.anchorId }}"{% endif %}{% if section.altBackground %} class="alt"{% endif %}>
+  <div class="wrap">
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+    </div>
+
+    {% for dept in section.departments %}
+    <div class="dir-dept">
+      <h3>{{ dept.name }}</h3>
+      <div class="dir-grid">
+        {% for person in dept.people %}
+        <div class="dir-person">
+          <div class="dir-name">{{ person.name }}</div>
+          <div class="dir-title">{{ person.title }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
