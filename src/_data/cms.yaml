@@ -1,123 +1,114 @@
-
-# ============================================================================
-# This file is the entire content of the site. Edit it by hand, or -- far
-# easier -- through the visual editor at /admin once the site is deployed.
-# The structure:
-#   site      -> page title, nav bar, logos
-#   sections  -> an ordered list of page blocks. Add, remove, reorder, or
-#                change the "type" of any entry to change the page.
-#   footer    -> the footer content at the bottom of every page
-# ============================================================================
-
 site:
-  pageTitle: "CodePath 2026 Offsite — Everything You Need to Know"
-  brandName: "CodePath"
-  brandSub: "2026 OFFSITE"
-  navLogo: "/images/logo-nav.png"
+  pageTitle: CodePath 2026 Offsite — Everything You Need to Know
+  brandName: CodePath
+  brandSub: 2026 OFFSITE
+  navLogo: /images/logo-nav.png
   nav:
-    - label: "Agenda"
-      anchor: "#agenda"
-    - label: "Travel"
-      anchor: "#travel"
-    - label: "Expenses"
-      anchor: "#money"
-    - label: "Directory"
-      anchor: "#directory"
-    - label: "FAQ"
-      anchor: "#faq"
-
+    - label: Agenda
+      anchor: '#agenda'
+    - label: Travel
+      anchor: '#travel'
+    - label: Expenses
+      anchor: '#money'
+    - label: Directory
+      anchor: '#directory'
+    - label: FAQ
+      anchor: '#faq'
 sections:
-  - type: "hero"
+  - type: hero
     badgeText: "Check back here for the latest information. We'll let you know in Slack whenever there's something new to see! #offsite-2026"
-    logo: "/images/logo-hero.png"
-    logoLabel: "Offsite 2026"
-    heading: "Our largest CodePath Offsite"
-    subtitle: "October 13–15, 2026 · **Carefree, Arizona** at CIVANA Wellness Resort & Spa. We're a remote team — this week is about coming together in person to celebrate what we've built, plan what's next, and reconnect as a community."
-    backgroundImage: "/images/hero-background.jpg"
-    ctaLabel: "Browse the full FAQ"
-    ctaLink: "#faq"
-
-  - type: "quickFacts"
+    logo: /images/logo-hero.png
+    logoLabel: Offsite 2026
+    heading: Our largest CodePath Offsite
+    subtitle: October 13–15, 2026 · **Carefree, Arizona** at CIVANA Wellness Resort & Spa. We're a remote team — this week is about coming together in person to celebrate what we've built, plan what's next, and reconnect as a community.
+    backgroundImage: /images/hero-background.jpg
+    ctaLabel: Browse the full FAQ
+    ctaLink: '#faq'
+  - type: quickFacts
     facts:
-      - label: "Dates"
-        value: "Oct 13–15, 2026"
-        link: ""
-      - label: "Venue"
-        value: "CIVANA Resort, Carefree AZ"
-        link: "https://www.civanacarefree.com/"
-
-  - type: "gallery"
-    heading: "What's waiting for you at CIVANA"
-    intro: "Grounds tucked into 20+ acres of Sonoran Desert, plus the pools, food, and spaces you'll get to enjoy while you're there."
-    linkUrl: "https://www.civanacarefree.com/gallery/"
-    credit: "Photos courtesy of CIVANA Wellness Resort & Spa — [see the full gallery](https://www.civanacarefree.com/gallery/)."
+      - label: Dates
+        value: Oct 13–15, 2026
+        link: ''
+      - label: Venue
+        value: CIVANA Resort, Carefree AZ
+        link: https://www.civanacarefree.com/
+  - type: gallery
+    heading: What's waiting for you at CIVANA
+    intro: Grounds tucked into 20+ acres of Sonoran Desert, plus the pools, food, and spaces you'll get to enjoy while you're there.
+    linkUrl: https://www.civanacarefree.com/gallery/
+    credit: Photos courtesy of CIVANA Wellness Resort & Spa — [see the full gallery](https://www.civanacarefree.com/gallery/).
     images:
-      - image: "/images/gallery-pool.jpg"
-        alt: "Pool at CIVANA surrounded by cacti and palms"
-      - image: "/images/gallery-patio.jpg"
-        alt: "Outdoor dining patio at CIVANA at dusk"
-      - image: "/images/gallery-garden.jpg"
-        alt: "Desert garden with cacti and agave at CIVANA"
-
-  - type: "cardPair"
-    anchorId: "overview"
-    kicker: "Overview"
-    heading: "Your travel days"
-    intro: "Arrival and departure timing depends on whether you're on the Executive Leadership Team or joining as part of the wider team."
-    cardStyle: "mid"
+      - image: /images/gallery-pool.jpg
+        alt: Pool at CIVANA surrounded by cacti and palms
+      - image: /images/gallery-patio.jpg
+        alt: Outdoor dining patio at CIVANA at dusk
+      - image: /images/gallery-garden.jpg
+        alt: Desert garden with cacti and agave at CIVANA
+  - type: cardPair
+    heading: Your travel days
+    intro: Arrival and departure timing depends on whether you're on the Executive Leadership Team or joining as part of the wider team.
+    anchorId: overview
+    altBackground: false
+    kicker: Overview
+    cardStyle: mid
     cards:
-      - title: "ELT"
+      - title: ELT
         items:
-          - "Arrive **October 12**, around 4:00 PM (hotel check-in)"
-          - "ELT dinner that evening"
-          - "Depart **October 15**"
-      - title: "All other staff"
+          - Arrive **October 12**, around 4:00 PM (hotel check-in)
+          - ELT dinner that evening
+          - Depart **October 15**
+      - title: All other staff
         items:
-          - "Arrive **October 13**, around 4:00 PM (hotel check-in)"
-          - "All-team welcome dinner that evening"
-          - "Depart **October 15**"
+          - Arrive **October 13**, around 4:00 PM (hotel check-in)
+          - All-team welcome dinner that evening
+          - Depart **October 15**
     notes:
-      - title: "Arriving early?"
-        body: "If you're arriving before check-in, you're welcome to make yourself comfortable at the resort. There's space to sit down, get some work done, grab something to eat, or simply hang out and enjoy the property. Resort amenities and classes are also available to you during this time."
-      - title: "Need flexibility?"
-        body: "We've taken the travel and scheduling needs you shared through your RSVP and flight bookings into account. Whether you're arriving a day early, later, staying an extra day for team time, or simply building in additional travel time, your accommodations have been planned accordingly."
-
-  - type: "agenda"
-    anchorId: "agenda"
+      - title: Arriving early?
+        body: If you're arriving before check-in, you're welcome to make yourself comfortable at the resort. There's space to sit down, get some work done, grab something to eat, or simply hang out and enjoy the property. Resort amenities and classes are also available to you during this time.
+      - title: Need flexibility?
+        body: We've taken the travel and scheduling needs you shared through your RSVP and flight bookings into account. Whether you're arriving a day early, later, staying an extra day for team time, or simply building in additional travel time, your accommodations have been planned accordingly.
+  - type: agenda
+    heading: Agenda at a glance
+    intro: A full minute-by-minute schedule is coming closer to the event — here's the shape of the week.
+    anchorId: agenda
     altBackground: true
-    kicker: "The four days"
-    heading: "Agenda at a glance"
-    intro: "A full minute-by-minute schedule is coming closer to the event — here's the shape of the week."
+    kicker: The four days
     days:
-      - number: "12"
-        date: "Monday, October 12"
-        title: "ELT arrival + dinner"
-        body: "Executive Leadership Team checks in and kicks off the week together."
-      - number: "13"
-        date: "Tuesday, October 13"
-        title: "ELT working session · All-team arrival · Welcome dinner"
-        body: "ELT continues strategy meetings while the rest of the team checks in during the afternoon, followed by a welcome dinner with the full team."
-        eveningTitle: "Evening: Mingle Under the Stars — happy hour and dinner"
-        eveningBody: "Our first night all together! Come get to know your teammates over drinks and a Mediterranean dinner under the Arizona sky. There'll be lawn games, a few get-to-know-you surprises, and plenty of time to just hang out."
-        note: "**Before you pack:** add your favorite songs to our [Spotify playlist](https://open.spotify.com/playlist/6LXUS2TSe4A4W3Iu9BbUnJ?si=qu98nQoySceeq5qu-jiA9A&utm_source=copy-link&pi=SJaG3FkxSFiDN&pt=771246325cbe5dbd436a675201139940) so your classics make the list. If yours comes on, go ahead and claim it!"
-      - number: "14"
-        date: "Wednesday, October 14"
-        title: "Full day of team meetings & team fun"
-        body: "A full day of sessions, team-building activities, and dinner together, and a fun night out on the town!"
-        eveningTitle: "Evening: Western Wednesday — happy hour, dinner & a night out at a local saloon"
+      - number: '12'
+        date: Monday, October 12
+        title: ELT arrival + dinner
+        body: Executive Leadership Team checks in and kicks off the week together.
+        eveningTitle: ''
+        eveningBody: ''
+        note: ''
+      - number: '13'
+        date: Tuesday, October 13
+        title: ELT working session · All-team arrival · Welcome dinner
+        body: ELT continues strategy meetings while the rest of the team checks in during the afternoon, followed by a welcome dinner with the full team.
+        eveningTitle: 'Evening: Mingle Under the Stars — happy hour and dinner'
+        eveningBody: Our first night all together! Come get to know your teammates over drinks and a Mediterranean dinner under the Arizona sky. There'll be lawn games, a few get-to-know-you surprises, and plenty of time to just hang out.
+        note: '**Before you pack:** add your favorite songs to our [Spotify playlist](https://open.spotify.com/playlist/6LXUS2TSe4A4W3Iu9BbUnJ?si=qu98nQoySceeq5qu-jiA9A&utm_source=copy-link&pi=SJaG3FkxSFiDN&pt=771246325cbe5dbd436a675201139940) so your classics make the list. If yours comes on, go ahead and claim it!'
+      - number: '14'
+        date: Wednesday, October 14
+        title: Full day of team meetings & team fun
+        body: A full day of sessions, team-building activities, and dinner together, and a fun night out on the town!
+        eveningTitle: 'Evening: Western Wednesday — happy hour, dinner & a night out at a local saloon'
         eveningBody: "It's theme night! If you have western gear, we want to see it: fringe, boots, cowboy hats, bring 'em out. We'll kick things off with a delicious dinner and drinks, then head to a local saloon for a nightcap and some true Arizona atmosphere."
-        note: "The saloon is totally optional. Just so you know, there will be live bull riding that evening. If that's not your thing, we completely understand, and you're welcome to stay back at the resort."
-      - number: "15"
-        date: "Thursday, October 15"
-        title: "Breakfast + wrap-up + departure"
-        body: "Breakfast, full team gathering, then travel home for both ELT and all staff unless otherwise has been communicated by your team leader."
-
-  - type: "content"
-    anchorId: "travel"
-    kicker: "Getting there and staying"
-    heading: "Flights, hotel & ground transport"
-    intro: ""
-    body: |
+        note: The saloon is totally optional. Just so you know, there will be live bull riding that evening. If that's not your thing, we completely understand, and you're welcome to stay back at the resort.
+      - number: '15'
+        date: Thursday, October 15
+        title: Breakfast + wrap-up + departure
+        body: Breakfast, full team gathering, then travel home for both ELT and all staff unless otherwise has been communicated by your team leader.
+        eveningTitle: ''
+        eveningBody: ''
+        note: ''
+  - type: content
+    heading: Flights, hotel & ground transport
+    intro: ''
+    anchorId: travel
+    altBackground: false
+    kicker: Getting there and staying
+    body: |-
       ### Hotel
 
       - Has been booked for you — no action needed. CodePath handles all hotel bookings, and every team member gets their own individual room.
@@ -161,28 +152,30 @@ sections:
       Questions about your flights or arrival/departure logistics? Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org).
 
       > **Checked bags:** Your first checked bag is covered — use your virtual (or physical) Ramp card. A second bag is only reimbursed if you're carrying supplies required for official business, and it needs approval before your day of travel.
-
-  - type: "cardPair"
-    kicker: ""
-    heading: "Ground transportation"
-    intro: ""
-    cardStyle: "dark"
+  - type: cardPair
+    heading: Ground transportation
+    intro: ''
+    anchorId: ''
+    altBackground: false
+    kicker: ''
+    cardStyle: dark
     cards:
-      - title: "Shuttle"
+      - title: Shuttle
         items:
-          - "CodePath is scheduling a shuttle for arrival and departure dates."
-          - "_Specific shuttle times are still being finalized — we'll share them as soon as they're confirmed. If your flight times fall outside the shuttle windows, arrange your own transport (like a Lyft or Uber) and expense it — CodePath will reimburse it._"
-      - title: "Driving instead?"
+          - CodePath is scheduling a shuttle for arrival and departure dates.
+          - _Specific shuttle times are still being finalized — we'll share them as soon as they're confirmed. If your flight times fall outside the shuttle windows, arrange your own transport (like a Lyft or Uber) and expense it — CodePath will reimburse it._
+      - title: Driving instead?
         items:
-          - "If you'd rather drive your personal vehicle, CodePath reimburses at the current [IRS per-mile business rate](https://www.irs.gov/tax-professionals/standard-mileage-rates), plus tolls and parking. Fuel isn't reimbursed separately since it's built into the mileage rate."
-          - "Submit a reimbursement request in Ramp with: dates of travel, start/end locations, total miles driven, and receipts for tolls and parking."
+          - If you'd rather drive your personal vehicle, CodePath reimburses at the current [IRS per-mile business rate](https://www.irs.gov/tax-professionals/standard-mileage-rates), plus tolls and parking. Fuel isn't reimbursed separately since it's built into the mileage rate.
+          - 'Submit a reimbursement request in Ramp with: dates of travel, start/end locations, total miles driven, and receipts for tolls and parking.'
     notes: []
-
-  - type: "content"
-    kicker: ""
-    heading: "Getting around the property"
-    intro: ""
-    body: |
+  - type: content
+    heading: Getting around the property
+    intro: ''
+    anchorId: ''
+    altBackground: false
+    kicker: ''
+    body: |-
       37220 Mule Train Road, Carefree, AZ 85377 · [Get directions](https://www.google.com/maps/dir/?api=1&destination=37220+Mule+Train+Road,+Carefree,+AZ+85377)
 
       CIVANA's own Discovery Map — useful for finding your room building, the spa, meeting spaces, and the quiet zones once you're onsite.
@@ -190,14 +183,13 @@ sections:
       [![CIVANA Discovery Map showing resort buildings, pools, spa, trails, and amenities](/images/discovery-map-thumb.jpg)](/images/discovery-map.jpg)
 
       Tap the map to open it full size. Room buildings A–D and Saguaro I–V are where most guest rooms are located; the Lobby (★) and Terras restaurant sit centrally on the property.
-
-  - type: "content"
-    anchorId: "money"
+  - type: content
+    heading: Money matters
+    intro: ''
+    anchorId: money
     altBackground: true
-    kicker: "Ramp & reimbursements"
-    heading: "Money matters"
-    intro: ""
-    body: |
+    kicker: Ramp & reimbursements
+    body: |-
       ### Per diem
 
       - **Travel days:** up to $100/day for food, on your virtual Ramp card.
@@ -244,7 +236,7 @@ sections:
       Any of these three ways works:
 
       - **Web or app (easiest):** Go to My Expenses → find the transaction under "Missing Items" → upload your receipt and add a memo.
-      - **Email:** Forward your receipt to [receipts@ramp.com](mailto:receipts@ramp.com) from your Ramp account email, with *memo: [purpose]* in the body.
+      - **Email:** Forward your receipt to [receipts@ramp.com](mailto:receipts@ramp.com) from your Ramp account email, with _memo: [purpose]_ in the body.
       - **Text:** Reply to Ramp's SMS prompt after a purchase with a photo of your receipt — any text you add becomes the memo.
 
       #### More finance resources
@@ -258,203 +250,202 @@ sections:
 
       Travel/personal insurance, barber/salon/spa services, luggage & briefcases, personal entertainment, reading materials & subscriptions, personal vehicle repairs/insurance, traffic fines & court costs, unauthorized memberships, non-emergency personal medical costs, personal credit card interest, lost or stolen personal property, personal hygiene items, laundry before day 6 of travel, in-room movies, house or pet sitting.
       </details>
-
-  - type: "directory"
-    anchorId: "directory"
+  - type: directory
+    heading: Attendee directory
+    intro: Everyone joining the offsite, organized by team.
+    anchorId: directory
     altBackground: true
-    kicker: "Who's coming"
-    heading: "Attendee directory"
-    intro: "Everyone joining the offsite, organized by team."
+    kicker: Who's coming
     departments:
-      - name: "Office of CEO"
+      - name: Office of CEO
         people:
-          - name: "Juliette Ramberg de Ruyter"
-            title: "Vice President & Chief of Staff"
-          - name: "Madison McCormick"
-            title: "Senior Director, Innovation & New Ventures"
-          - name: "Michael Ellison"
-            title: "Chief Executive Officer"
-      - name: "Revenue"
+          - name: Michael Ellison
+            title: Chief Executive Officer
+          - name: Madison McCormick
+            title: Senior Director, Innovation & New Ventures
+          - name: Juliette Ramberg de Ruyter
+            title: Vice President & Chief of Staff
+      - name: Revenue
         people:
-          - name: "Brian Madigan"
-            title: "Chief Operating Officer"
-          - name: "Ko Kim"
-            title: "Senior Partnership Manager"
-          - name: "Perry Nunes"
-            title: "Senior Product Marketing Manager"
-          - name: "Quinton Ma"
-            title: "Director of Business Operations"
-          - name: "Rachel Boroditsky"
-            title: "Head of Higher Education"
-          - name: "Terry Randolph"
-            title: "Senior Account Manager, Higher Education"
-          - name: "Yelesah Haseley"
-            title: "Senior Manager, Revenue Strategy & Operations"
-          - name: "Yuliya Spektorsky"
-            title: "Account Director, Enterprise"
-      - name: "People"
+          - name: Brian Madigan
+            title: Chief Operating Officer
+          - name: Ko Kim
+            title: Senior Partnership Manager
+          - name: Perry Nunes
+            title: Senior Product Marketing Manager
+          - name: Quinton Ma
+            title: Director of Business Operations
+          - name: Rachel Boroditsky
+            title: Head of Higher Education
+          - name: Terry Randolph
+            title: Senior Account Manager, Higher Education
+          - name: Yelesah Haseley
+            title: Senior Manager, Revenue Strategy & Operations
+          - name: Yuliya Spektorsky
+            title: Account Director, Enterprise
+      - name: People
         people:
-          - name: "Alisa Avelar"
-            title: "Head of People"
-          - name: "Aliyah Payton"
-            title: "Human Resources Generalist"
-          - name: "Anna Pham"
-            title: "Senior People Operations Coordinator"
-          - name: "Erica Holloway"
-            title: "Talent Sourcer"
-          - name: "Gazina Ali"
-            title: "Senior Technical Recruiter"
-          - name: "Joel Fluette"
-            title: "Senior Recruiter, Instructional Hiring"
-          - name: "Lisa White"
-            title: "Talent Engagement Coordinator"
-          - name: "Phillip Loya"
-            title: "Technical Recruiter"
-      - name: "Product"
+          - name: Alisa Avelar
+            title: Head of People
+          - name: Aliyah Payton
+            title: Human Resources Generalist
+          - name: Anna Pham
+            title: Senior People Operations Coordinator
+          - name: Erica Holloway
+            title: Talent Sourcer
+          - name: Gazina Ali
+            title: Senior Technical Recruiter
+          - name: Joel Fluette
+            title: Senior Recruiter, Instructional Hiring
+          - name: Lisa White
+            title: Talent Engagement Coordinator
+          - name: Phillip Loya
+            title: Technical Recruiter
+      - name: Product
         people:
-          - name: "Jeremy Biggs"
-            title: "Senior Director, Data"
-          - name: "Lucy Caffrey Maffei"
-            title: "Data Scientist"
-          - name: "Mike Boyle"
-            title: "Senior Data Engineer"
-          - name: "Nicholas DePaul"
-            title: "Founding Product Manager, AI Corps"
-          - name: "Rich Allen"
-            title: "Senior Product Manager, Higher Ed"
-          - name: "Sar Champagne Bielert"
-            title: "Manager, Curriculum Development"
-      - name: "Delivery"
+          - name: Jeremy Biggs
+            title: Senior Director, Data
+          - name: Lucy Caffrey Maffei
+            title: Data Scientist
+          - name: Mike Boyle
+            title: Senior Data Engineer
+          - name: Nicholas DePaul
+            title: Founding Product Manager, AI Corps
+          - name: Rich Allen
+            title: Senior Product Manager, Higher Ed
+          - name: Sar Champagne Bielert
+            title: Manager, Curriculum Development
+      - name: Delivery
         people:
-          - name: "Cam Flowers"
-            title: "Senior Manager, AI Delivery & Partner Deployments"
-          - name: "Chris Coleman"
-            title: "Chief Product Officer"
-          - name: "Gabriela Moreno"
-            title: "AI Practice Lead"
-          - name: "Geneva Scott"
-            title: "VP, Delivery"
-          - name: "Jayna Menard"
-            title: "AI Practice Lead"
-          - name: "Jude Kenny"
-            title: "Senior Manager, Enterprise Programs"
-          - name: "Katy Richardson"
-            title: "Senior Communications & Content Strategist"
-          - name: "Kelly Mosher"
-            title: "Lead Program Manager"
-          - name: "Mike Dane"
-            title: "Senior Manager of AI Practice, Claude Corps"
-          - name: "Mike Wales"
-            title: "Senior Director, AI Programs"
-          - name: "Omar Ahmed"
-            title: "AI Practice Lead"
-      - name: "Learning"
+          - name: Cam Flowers
+            title: Senior Manager, AI Delivery & Partner Deployments
+          - name: Chris Coleman
+            title: Chief Product Officer
+          - name: Gabriela Moreno
+            title: AI Practice Lead
+          - name: Geneva Scott
+            title: VP, Delivery
+          - name: Jayna Menard
+            title: AI Practice Lead
+          - name: Jude Kenny
+            title: Senior Manager, Enterprise Programs
+          - name: Katy Richardson
+            title: Senior Communications & Content Strategist
+          - name: Kelly Mosher
+            title: Lead Program Manager
+          - name: Mike Dane
+            title: Senior Manager of AI Practice, Claude Corps
+          - name: Mike Wales
+            title: Senior Director, AI Programs
+          - name: Omar Ahmed
+            title: AI Practice Lead
+      - name: Learning
         people:
-          - name: "Diogo Botelho"
-            title: "CiR Senior Manager of Program Implementation"
-          - name: "Doug Bergman"
-            title: "Senior Implementation Manager"
-          - name: "Kuhu Sharma"
-            title: "Senior Coordinator, Program Implementation & Delivery"
-          - name: "Nashira Williams"
-            title: "Senior Program Implementation Coordinator"
-          - name: "Stephanie Rosson"
-            title: "Director of Program Operations"
-          - name: "Tsun Ya (Susie) Liang"
-            title: "Senior Instructional Program Manager"
-          - name: "Valarie Regas"
-            title: "Implementation Manager"
-      - name: "Engineering"
+          - name: Diogo Botelho
+            title: CiR Senior Manager of Program Implementation
+          - name: Doug Bergman
+            title: Senior Implementation Manager
+          - name: Kuhu Sharma
+            title: Senior Coordinator, Program Implementation & Delivery
+          - name: Nashira Williams
+            title: Senior Program Implementation Coordinator
+          - name: Stephanie Rosson
+            title: Director of Program Operations
+          - name: Tsun Ya (Susie) Liang
+            title: Senior Instructional Program Manager
+          - name: Valarie Regas
+            title: Implementation Manager
+      - name: Engineering
         people:
-          - name: "Fredrik Håård"
-            title: "Senior Django Lead Developer"
-          - name: "Jason Tham"
-            title: "Staff Software Engineer"
-          - name: "Katelyn Kasperowicz"
-            title: "Staff Software Engineer"
-          - name: "Kristoffer Nordström"
-            title: "Project Lead"
-          - name: "Rick Benavidez"
-            title: "Staff Software Engineer"
-      - name: "Development"
+          - name: Fredrik Håård
+            title: Senior Django Lead Developer
+          - name: Jason Tham
+            title: Staff Software Engineer
+          - name: Katelyn Kasperowicz
+            title: Staff Software Engineer
+          - name: Kristoffer Nordström
+            title: Project Lead
+          - name: Rick Benavidez
+            title: Staff Software Engineer
+      - name: Development
         people:
-          - name: "Diana Muratova"
-            title: "Senior Manager, Development Operations"
-          - name: "Sarah Perry"
-            title: "Manager, Development"
-          - name: "Victoria Angulo"
-            title: "Director, Regional Development"
-          - name: "Chun Yee Yip"
-            title: "Raise for Good"
-      - name: "Finance"
+          - name: Diana Muratova
+            title: Senior Manager, Development Operations
+          - name: Sarah Perry
+            title: Manager, Development
+          - name: Victoria Angulo
+            title: Director, Regional Development
+          - name: Chun Yee Yip
+            title: Raise for Good
+      - name: Finance
         people:
-          - name: "Hojae Lee"
-            title: "Head of Finance"
-
-  - type: "faq"
-    anchorId: "faq"
-    kicker: "Everything else"
-    heading: "Frequently asked questions"
-    intro: "Organized by topic — click any question to expand it. This section will keep growing as more details are confirmed."
+          - name: Hojae Lee
+            title: Head of Finance
+  - type: faq
+    heading: Frequently asked questions
+    intro: Organized by topic — click any question to expand it. This section will keep growing as more details are confirmed.
+    anchorId: faq
+    altBackground: false
+    kicker: Everything else
     categories:
-      - icon: "✓"
-        title: "RSVP & planning"
+      - icon: ✓
+        title: RSVP & planning
         questions:
-          - q: "Do I need to RSVP?"
-            a: "RSVPs closed on September 10. If you haven't submitted yours, still need to update your details, or have a change in plans, email [offsite2026@codepath.org](mailto:offsite2026@codepath.org) as soon as possible."
-          - q: "What if I already have time off planned?"
-            a: "Talk to your manager. We'd love to have you there, but we respect time off you've already planned and won't expect you to change it. Please flag any conflicts as early as possible so it can be worked through together."
-          - q: "Who do I contact with questions?"
-            a: "Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org), or reach out in the dedicated Slack channel."
-      - icon: "◆"
-        title: "Event & venue"
+          - q: Do I need to RSVP?
+            a: RSVPs closed on September 10. If you haven't submitted yours, still need to update your details, or have a change in plans, email [offsite2026@codepath.org](mailto:offsite2026@codepath.org) as soon as possible.
+          - q: What if I already have time off planned?
+            a: Talk to your manager. We'd love to have you there, but we respect time off you've already planned and won't expect you to change it. Please flag any conflicts as early as possible so it can be worked through together.
+          - q: Who do I contact with questions?
+            a: Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org), or reach out in the dedicated Slack channel.
+      - icon: ◆
+        title: Event & venue
         questions:
-          - q: "Where exactly is the offsite?"
-            a: "[CIVANA Wellness Resort & Spa](https://www.civanacarefree.com/) in Carefree, Arizona — just outside Phoenix/Scottsdale. 37220 Mule Train Road, Carefree, AZ 85377."
-          - q: "What if I arrive early or have downtime — is there anything to do?"
-            a: "Absolutely. CIVANA has a wide range of outdoor spaces to relax in, plus a full daily schedule of wellness classes you can sign up for anytime. Instructions for signing up will land in your inbox a few days before you arrive."
-      - icon: "♥"
-        title: "Family, infants & guests"
+          - q: Where exactly is the offsite?
+            a: '[CIVANA Wellness Resort & Spa](https://www.civanacarefree.com/) in Carefree, Arizona — just outside Phoenix/Scottsdale. 37220 Mule Train Road, Carefree, AZ 85377.'
+          - q: What if I arrive early or have downtime — is there anything to do?
+            a: Absolutely. CIVANA has a wide range of outdoor spaces to relax in, plus a full daily schedule of wellness classes you can sign up for anytime. Instructions for signing up will land in your inbox a few days before you arrive.
+      - icon: ♥
+        title: Family, infants & guests
         questions:
-          - q: "Can I bring family or guests?"
-            a: "No — the offsite is for CodePath team members only. No additional family members or guests."
-          - q: "I have a nursing infant. Can my baby come?"
-            a: "We completely understand and support the needs of nursing parents."
-      - icon: "✈"
-        title: "International travel"
+          - q: Can I bring family or guests?
+            a: No — the offsite is for CodePath team members only. No additional family members or guests.
+          - q: I have a nursing infant. Can my baby come?
+            a: We completely understand and support the needs of nursing parents.
+      - icon: ✈
+        title: International travel
         questions:
-          - q: "What documents do I need to enter the United States?"
-            a: |
+          - q: What documents do I need to enter the United States?
+            a: |-
               It depends on your citizenship and passport:
 
               - Citizens of a Visa Waiver Program (VWP) country need a valid biometric e-passport and ESTA approval obtained before boarding, an intended stay of 90 days or less, and a return or onward ticket.
               - ESTA is valid for two years (or until your passport expires, whichever comes first) and covers multiple short visits — if you've traveled to the U.S. before, you may already have a valid one on file.
-          - q: "How far in advance should I apply for ESTA?"
-            a: "As early as possible. Processing can range from 24 hours to 3 weeks (averaging 4–5 business days), but it varies by country."
-          - q: "Will CodePath reimburse ESTA application costs?"
-            a: "Yes. Submit a request through Ramp with your receipt."
-          - q: "What if my passport is close to expiring?"
-            a: "Renew it before booking travel. Many countries, including the U.S. for many visa categories, require your passport to stay valid for a set period beyond your travel dates (commonly 6 months). If your ESTA is tied to an expiring passport, it becomes invalid too — you'd need to reapply once you have your new one."
-          - q: "What should I bring with me when I travel internationally?"
-            a: |
+          - q: How far in advance should I apply for ESTA?
+            a: As early as possible. Processing can range from 24 hours to 3 weeks (averaging 4–5 business days), but it varies by country.
+          - q: Will CodePath reimburse ESTA application costs?
+            a: Yes. Submit a request through Ramp with your receipt.
+          - q: What if my passport is close to expiring?
+            a: Renew it before booking travel. Many countries, including the U.S. for many visa categories, require your passport to stay valid for a set period beyond your travel dates (commonly 6 months). If your ESTA is tied to an expiring passport, it becomes invalid too — you'd need to reapply once you have your new one.
+          - q: What should I bring with me when I travel internationally?
+            a: |-
               - Your passport, valid for the required duration
               - Your ESTA approval printout, as applicable
               - Proof of onward/return travel (recommended, even if not always requested)
               - Document explaining purpose of travel — international travelers have been provided with a letter; if you have not received one, please reach out to [offsite2026@codepath.org](mailto:offsite2026@codepath.org)
-          - q: "What seats can I purchase on my flight as an international traveler?"
-            a: "You may upgrade to Economy Plus for extra legroom. Any additional upgrades need your manager's approval."
-      - icon: "✦"
-        title: "Food & dietary needs"
+          - q: What seats can I purchase on my flight as an international traveler?
+            a: You may upgrade to Economy Plus for extra legroom. Any additional upgrades need your manager's approval.
+      - icon: ✦
+        title: Food & dietary needs
         questions:
-          - q: "Will meals be covered?"
-            a: "Yes — all meals onsite at CIVANA are fully covered by CodePath. For meals during travel, use your virtual or physical Ramp card."
-          - q: "What if I have dietary restrictions or accessibility needs?"
-            a: "Dietary restrictions and accessibility needs have been collected through your RSVP form. If anything has changed since submission, reach out to [offsite2026@codepath.org](mailto:offsite2026@codepath.org)."
-      - icon: "☀"
-        title: "Packing & what to expect"
+          - q: Will meals be covered?
+            a: Yes — all meals onsite at CIVANA are fully covered by CodePath. For meals during travel, use your virtual or physical Ramp card.
+          - q: What if I have dietary restrictions or accessibility needs?
+            a: Dietary restrictions and accessibility needs have been collected through your RSVP form. If anything has changed since submission, reach out to [offsite2026@codepath.org](mailto:offsite2026@codepath.org).
+      - icon: ☀
+        title: Packing & what to expect
         questions:
-          - q: "What should I pack? Is there a dress code?"
-            a: |
+          - q: What should I pack? Is there a dress code?
+            a: |-
               Casual but professional — we're at a resort, so lean into that, but this is still a work event, so use your best judgment. More details (including any themed evenings) will be shared closer to the event.
 
               Since CIVANA offers everything from outdoor adventures and yoga to spa and fitness, pack for a range of activities:
@@ -469,26 +460,25 @@ sections:
               **Bring your work laptop.**
 
               **Seasonal weather:** October in Carefree runs roughly 45°F–85°F (lows to highs).
-          - q: "Are checked bag fees covered?"
-            a: "Yes — your first checked bag is covered using your virtual (or physical) Ramp card. A second bag is only reimbursed if you must carry a large amount of supplies for official business, and needs approval before your day of travel."
-          - q: "What if I need to step out for a meeting?"
-            a: "We understand that the important work of CodePath doesn't pause during the offsite. There are plenty of indoor and outdoor quiet corners to take a call — we ask that you try to minimize this to stay present, but totally understand if something needs your attention."
-      - icon: "$"
-        title: "Money & expenses — the fine print"
+          - q: Are checked bag fees covered?
+            a: Yes — your first checked bag is covered using your virtual (or physical) Ramp card. A second bag is only reimbursed if you must carry a large amount of supplies for official business, and needs approval before your day of travel.
+          - q: What if I need to step out for a meeting?
+            a: We understand that the important work of CodePath doesn't pause during the offsite. There are plenty of indoor and outdoor quiet corners to take a call — we ask that you try to minimize this to stay present, but totally understand if something needs your attention.
+      - icon: $
+        title: Money & expenses — the fine print
         questions:
-          - q: "What are the daily per diem rates?"
-            a: "Up to $100/day for food on travel days, covering breakfast, lunch, and dinner combined. Meals onsite at CIVANA are already fully covered separately."
-
+          - q: What are the daily per diem rates?
+            a: Up to $100/day for food on travel days, covering breakfast, lunch, and dinner combined. Meals onsite at CIVANA are already fully covered separately.
 footer:
-  logo: "/images/logo-footer.png"
-  tagline: "CodePath 2026 Offsite"
-  description: "October 13–15, 2026 · CIVANA Wellness Resort & Spa, Carefree, Arizona. This is a living document and will be updated as more details are confirmed."
+  logo: /images/logo-footer.png
+  tagline: CodePath 2026 Offsite
+  description: October 13–15, 2026 · CIVANA Wellness Resort & Spa, Carefree, Arizona. This is a living document and will be updated as more details are confirmed.
   quickLinks:
-    - label: "Travel policy"
-      url: "https://docs.google.com/document/d/1KkZApHr2x4dXZCNL87ChWDnvzg3zqvHVl7fOHWD-x1c/edit?usp=sharing"
-    - label: "CIVANA Resort site"
-      url: "https://www.civanacarefree.com/"
-  contactEmail: "offsite2026@codepath.org"
-  contactNote: "#offsite-2026 (Slack)"
-  bottomLeft: "Built for the CodePath team."
-  bottomRight: "Content current as of the latest FAQ update."
+    - label: Travel policy
+      url: https://docs.google.com/document/d/1KkZApHr2x4dXZCNL87ChWDnvzg3zqvHVl7fOHWD-x1c/edit?usp=sharing
+    - label: CIVANA Resort site
+      url: https://www.civanacarefree.com/
+  contactEmail: offsite2026@codepath.org
+  contactNote: '#offsite-2026 (Slack)'
+  bottomLeft: Built for the CodePath team.
+  bottomRight: Content current as of the latest FAQ update.
