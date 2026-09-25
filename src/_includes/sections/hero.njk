@@ -1,0 +1,18 @@
+<section class="hero" style="background-image:url('{{ section.backgroundImage }}');">
+  <div class="hero-inner">
+    <div class="hero-brand">
+      {% if section.logo %}<img class="hero-logo" src="{{ section.logo }}" alt="{{ cms.site.brandName }} logo">{% endif %}
+      {% if section.logoLabel %}<span class="hero-brand-label">{{ section.logoLabel }}</span>{% endif %}
+    </div>
+    {% if section.badgeText %}
+    <span class="badge-pill"><span class="dot"></span>{{ section.badgeText }}</span>
+    {% endif %}
+    <h1>{{ section.heading }}</h1>
+    <p class="sub">{{ section.subtitle | markdownInline | safe }}</p>
+    {% if section.ctaLabel %}
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="{{ section.ctaLink }}">{{ section.ctaLabel }}</a>
+    </div>
+    {% endif %}
+  </div>
+</section>

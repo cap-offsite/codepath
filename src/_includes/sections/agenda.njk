@@ -1,0 +1,30 @@
+<section{% if section.anchorId %} id="{{ section.anchorId }}"{% endif %}{% if section.altBackground %} class="alt"{% endif %}>
+  <div class="wrap">
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+    </div>
+    <div class="timeline">
+      {% for day in section.days %}
+      <div class="tl-item">
+        <div class="tl-dot">{{ day.number }}</div>
+        <span class="tl-date">{{ day.date }}</span>
+        <h3>{{ day.title | markdownInline | safe }}</h3>
+        <p>{{ day.body }}</p>
+        {% if day.eveningTitle or day.eveningBody %}
+        <div style="margin-top:14px;">
+          {% if day.eveningTitle %}<p style="font-weight:600; margin-bottom:4px;">{{ day.eveningTitle | markdownInline | safe }}</p>{% endif %}
+          {% if day.eveningBody %}<p>{{ day.eveningBody }}</p>{% endif %}
+        </div>
+        {% endif %}
+        {% if day.note %}
+        <div class="note-box" style="margin-top:14px;">
+          {{ day.note | markdownInline | safe }}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

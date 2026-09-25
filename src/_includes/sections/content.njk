@@ -1,0 +1,14 @@
+<section{% if section.anchorId %} id="{{ section.anchorId }}"{% endif %}{% if section.altBackground %} class="alt"{% endif %}>
+  <div class="wrap">
+    {% if section.heading %}
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+    </div>
+    {% endif %}
+    <div class="content-body">
+      {{ section.body | markdown | safe }}
+    </div>
+  </div>
+</section>

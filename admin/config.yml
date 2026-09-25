@@ -1,0 +1,213 @@
+# Sveltia CMS configuration.
+# Docs: https://sveltiacms.app/en/docs
+#
+# IMPORTANT: replace the two placeholders below before you deploy:
+#   1. repo:     "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME"
+#   2. base_url: the Cloudflare Worker URL from sveltia-cms-auth (see SETUP.md)
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  branch: main
+  base_url: https://YOUR-AUTH-WORKER.YOUR-SUBDOMAIN.workers.dev
+
+# Where uploaded images are stored in the repo, and the URL path the site
+# serves them from.
+media_folder: "src/images"
+public_folder: "/images"
+
+# Client edits are committed straight to the branch above (no PR review step).
+# Set this to true instead if you'd rather every change open a pull request
+# for you to approve before it goes live.
+publish_mode: simple
+
+collections:
+  - name: "page"
+    label: "Offsite Page"
+    editor:
+      preview: false
+    files:
+      - name: "content"
+        label: "Site content"
+        file: "src/_data/cms.yaml"
+        fields:
+          - label: "Site settings"
+            name: "site"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Browser tab title", name: "pageTitle", widget: "string" }
+              - { label: "Brand name (e.g. company name)", name: "brandName", widget: "string" }
+              - { label: "Brand subtitle (small text next to name)", name: "brandSub", widget: "string" }
+              - { label: "Nav bar logo", name: "navLogo", widget: "image" }
+              - label: "Top nav links"
+                name: "nav"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Links to (e.g. #faq)", name: "anchor", widget: "string" }
+
+          - label: "Page sections"
+            name: "sections"
+            label_singular: "Section"
+            widget: "list"
+            summary: "{{fields.type}} — {{fields.heading}}"
+            types:
+              - label: "Hero (top banner)"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Small banner text (optional)", name: "badgeText", widget: "string", required: false }
+                  - { label: "Small logo shown in the banner", name: "logo", widget: "image", required: false }
+                  - { label: "Text under that logo", name: "logoLabel", widget: "string", required: false }
+                  - { label: "Big headline", name: "heading", widget: "string" }
+                  - { label: "Subtitle (supports **bold** and links)", name: "subtitle", widget: "text" }
+                  - { label: "Background photo", name: "backgroundImage", widget: "image" }
+                  - { label: "Button text (optional)", name: "ctaLabel", widget: "string", required: false }
+                  - { label: "Button links to (e.g. #faq)", name: "ctaLink", widget: "string", required: false }
+
+              - label: "Quick facts strip"
+                name: "quickFacts"
+                widget: "object"
+                fields:
+                  - label: "Facts"
+                    name: "facts"
+                    widget: "list"
+                    summary: "{{fields.label}}: {{fields.value}}"
+                    fields:
+                      - { label: "Label (e.g. Dates)", name: "label", widget: "string" }
+                      - { label: "Value (e.g. Oct 13–15, 2026)", name: "value", widget: "string" }
+                      - { label: "Link (optional)", name: "link", widget: "string", required: false }
+
+              - label: "Photo gallery"
+                name: "gallery"
+                widget: "object"
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Intro text", name: "intro", widget: "text", required: false }
+                  - { label: "Photos open this link when clicked", name: "linkUrl", widget: "string", required: false }
+                  - { label: "Credit line under the photos", name: "credit", widget: "string", required: false }
+                  - label: "Photos (works best with exactly 3)"
+                    name: "images"
+                    widget: "list"
+                    summary: "{{fields.alt}}"
+                    fields:
+                      - { label: "Photo", name: "image", widget: "image" }
+                      - { label: "Description (for accessibility)", name: "alt", widget: "string" }
+
+              - label: "Two-column cards"
+                name: "cardPair"
+                widget: "object"
+                fields:
+                  - { label: "Link target for the nav bar (optional, e.g. travel)", name: "anchorId", widget: "string", required: false }
+                  - { label: "Use the tan/cream background?", name: "altBackground", widget: "boolean", default: false, required: false }
+                  - { label: "Small label above the heading (optional)", name: "kicker", widget: "string", required: false }
+                  - { label: "Heading (optional — leave blank to hide)", name: "heading", widget: "string", required: false }
+                  - { label: "Intro text (optional)", name: "intro", widget: "text", required: false }
+                  - label: "Card accent color"
+                    name: "cardStyle"
+                    widget: "select"
+                    options:
+                      - { label: "Green", value: "" }
+                      - { label: "Teal", value: "mid" }
+                      - { label: "Dark navy", value: "dark" }
+                    default: ""
+                  - label: "Cards (usually 2)"
+                    name: "cards"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Card title", name: "title", widget: "string" }
+                      - label: "Bullet points (supports **bold** and [links](url))"
+                        name: "items"
+                        widget: "list"
+                        field: { label: "Line", name: "item", widget: "string" }
+                  - label: "Callout notes below the cards"
+                    name: "notes"
+                    widget: "list"
+                    required: false
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Note title", name: "title", widget: "string" }
+                      - { label: "Note text", name: "body", widget: "text" }
+
+              - label: "Agenda timeline"
+                name: "agenda"
+                widget: "object"
+                fields:
+                  - { label: "Link target for the nav bar (e.g. agenda)", name: "anchorId", widget: "string", required: false }
+                  - { label: "Use the tan/cream background?", name: "altBackground", widget: "boolean", default: false, required: false }
+                  - { label: "Small label above the heading", name: "kicker", widget: "string", required: false }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Intro text", name: "intro", widget: "text", required: false }
+                  - label: "Days"
+                    name: "days"
+                    widget: "list"
+                    summary: "{{fields.date}} — {{fields.title}}"
+                    fields:
+                      - { label: "Day number shown in the circle (e.g. 13)", name: "number", widget: "string" }
+                      - { label: "Date (e.g. Tuesday, October 13)", name: "date", widget: "string" }
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "body", widget: "text" }
+                      - { label: "Evening plans title (optional)", name: "eveningTitle", widget: "string", required: false }
+                      - { label: "Evening plans description (optional)", name: "eveningBody", widget: "text", required: false }
+                      - { label: "Callout note (optional, supports **bold** and [links](url))", name: "note", widget: "text", required: false }
+
+              - label: "Text block (freeform content)"
+                name: "content"
+                widget: "object"
+                fields:
+                  - { label: "Link target for the nav bar (optional, e.g. money)", name: "anchorId", widget: "string", required: false }
+                  - { label: "Use the tan/cream background?", name: "altBackground", widget: "boolean", default: false, required: false }
+                  - { label: "Small label above the heading (optional)", name: "kicker", widget: "string", required: false }
+                  - { label: "Heading (optional — leave blank to hide)", name: "heading", widget: "string", required: false }
+                  - { label: "Intro text (optional)", name: "intro", widget: "text", required: false }
+                  - label: "Body"
+                    name: "body"
+                    widget: "markdown"
+                    hint: "Use the toolbar for headings, bold, links and lists. To add a collapsible \"click to expand\" block, switch to the code view (</>) and wrap it in <details><summary>Question</summary> ... </details>."
+
+              - label: "FAQ"
+                name: "faq"
+                widget: "object"
+                fields:
+                  - { label: "Link target for the nav bar (e.g. faq)", name: "anchorId", widget: "string", required: false }
+                  - { label: "Use the tan/cream background?", name: "altBackground", widget: "boolean", default: false, required: false }
+                  - { label: "Small label above the heading", name: "kicker", widget: "string", required: false }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Intro text", name: "intro", widget: "text", required: false }
+                  - label: "Categories"
+                    name: "categories"
+                    widget: "list"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Icon (a single character or symbol)", name: "icon", widget: "string" }
+                      - { label: "Category title", name: "title", widget: "string" }
+                      - label: "Questions"
+                        name: "questions"
+                        widget: "list"
+                        summary: "{{fields.q}}"
+                        fields:
+                          - { label: "Question", name: "q", widget: "string" }
+                          - { label: "Answer", name: "a", widget: "markdown" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Footer logo", name: "logo", widget: "image" }
+              - { label: "Footer heading", name: "tagline", widget: "string" }
+              - { label: "Footer description", name: "description", widget: "text" }
+              - label: "Quick links"
+                name: "quickLinks"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Contact email", name: "contactEmail", widget: "string" }
+              - { label: "Contact note (e.g. Slack channel)", name: "contactNote", widget: "string" }
+              - { label: "Bottom-left small text", name: "bottomLeft", widget: "string" }
+              - { label: "Bottom-right small text", name: "bottomRight", widget: "string" }

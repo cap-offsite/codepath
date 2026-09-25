@@ -1,0 +1,17 @@
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      <p>{{ section.intro }}</p>
+    </div>
+    <div class="gallery-grid">
+      {% for img in section.images %}
+      <a class="{% if loop.index0 == 0 %}g-wide{% elif loop.index0 == 1 %}g-tall{% endif %}" href="{{ section.linkUrl }}" target="_blank" rel="noopener">
+        <img src="{{ img.image }}" alt="{{ img.alt }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
+    {% if section.credit %}<p class="gallery-credit">{{ section.credit | markdownInline | safe }}</p>{% endif %}
+  </div>
+</section>

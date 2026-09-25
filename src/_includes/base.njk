@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ cms.site.pageTitle }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><img src="{{ cms.site.navLogo }}" alt="{{ cms.site.brandName }} logo"> {{ cms.site.brandName }} <small>{{ cms.site.brandSub }}</small></a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.links').classList.toggle('open')"><span></span></button>
+    <nav class="links">
+      {% for item in cms.site.nav %}
+      <a href="{{ item.anchor }}">{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  {% for section in cms.sections %}
+    {% if section.type == "hero" %}{% include "sections/hero.njk" %}
+    {% elif section.type == "quickFacts" %}{% include "sections/quickFacts.njk" %}
+    {% elif section.type == "gallery" %}{% include "sections/gallery.njk" %}
+    {% elif section.type == "cardPair" %}{% include "sections/cardPair.njk" %}
+    {% elif section.type == "agenda" %}{% include "sections/agenda.njk" %}
+    {% elif section.type == "content" %}{% include "sections/content.njk" %}
+    {% elif section.type == "faq" %}{% include "sections/faq.njk" %}
+    {% endif %}
+  {% endfor %}
+</main>
+
+<footer>
+  <svg class="footer-embellishment" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs><clipPath id="circleClip"><circle cx="100" cy="100" r="100"/></clipPath></defs>
+    <g clip-path="url(#circleClip)" stroke="#ffffff" stroke-width="1">
+      <line x1="-40" y1="220" x2="220" y2="-40"/>
+      <line x1="-20" y1="220" x2="220" y2="-20"/>
+      <line x1="0" y1="220" x2="220" y2="0"/>
+      <line x1="20" y1="220" x2="220" y2="20"/>
+      <line x1="40" y1="220" x2="220" y2="40"/>
+      <line x1="60" y1="220" x2="220" y2="60"/>
+      <line x1="80" y1="220" x2="220" y2="80"/>
+      <line x1="100" y1="220" x2="220" y2="100"/>
+      <line x1="120" y1="220" x2="220" y2="120"/>
+      <line x1="140" y1="220" x2="220" y2="140"/>
+      <line x1="160" y1="220" x2="220" y2="160"/>
+      <line x1="180" y1="220" x2="220" y2="180"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="foot-logo"><img src="{{ cms.footer.logo }}" alt="{{ cms.site.brandName }} logo"><span>{{ cms.footer.tagline }}</span></div>
+      <p>{{ cms.footer.description }}</p>
+    </div>
+    <div>
+      <h4>Quick links</h4>
+      {% for link in cms.footer.quickLinks %}
+      <p><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></p>
+      {% endfor %}
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:{{ cms.footer.contactEmail }}">{{ cms.footer.contactEmail }}</a></p>
+      <p>{{ cms.footer.contactNote }}</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>{{ cms.footer.bottomLeft }}</span>
+    <span>{{ cms.footer.bottomRight }}</span>
+  </div>
+</footer>
+
+</body>
+</html>

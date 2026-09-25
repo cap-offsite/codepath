@@ -1,0 +1,29 @@
+<section{% if section.anchorId %} id="{{ section.anchorId }}"{% endif %}{% if section.altBackground %} class="alt"{% endif %}>
+  <div class="wrap">
+    {% if section.heading %}
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+    </div>
+    {% endif %}
+    <div class="pair">
+      {% for card in section.cards %}
+      <div class="card{% if section.cardStyle %} {{ section.cardStyle }}{% endif %}">
+        <h3>{{ card.title }}</h3>
+        <ul>
+          {% for item in card.items %}
+          <li>{{ item | markdownInline | safe }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% for note in section.notes %}
+    <div class="note-box"{% if not loop.first %} style="margin-top:16px;"{% endif %}>
+      <strong>{{ note.title }}</strong><br>
+      {{ note.body }}
+    </div>
+    {% endfor %}
+  </div>
+</section>

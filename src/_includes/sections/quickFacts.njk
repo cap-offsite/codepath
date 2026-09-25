@@ -1,0 +1,12 @@
+<div class="facts">
+  <div class="facts-grid">
+    {% for fact in section.facts %}
+    <div class="fact">
+      <div class="label">{{ fact.label }}</div>
+      <div class="value">
+        {% if fact.link %}<a href="{{ fact.link }}" target="_blank" rel="noopener">{{ fact.value }}</a>{% else %}{{ fact.value }}{% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

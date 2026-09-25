@@ -1,0 +1,21 @@
+<section{% if section.anchorId %} id="{{ section.anchorId }}"{% endif %}{% if section.altBackground %} class="alt"{% endif %}>
+  <div class="wrap">
+    <div class="section-head">
+      {% if section.kicker %}<span class="kicker">{{ section.kicker }}</span>{% endif %}
+      <h2>{{ section.heading }}</h2>
+      {% if section.intro %}<p>{{ section.intro }}</p>{% endif %}
+    </div>
+
+    {% for cat in section.categories %}
+    <div class="faq-cat">
+      <div class="faq-cat-head"><div class="icn">{{ cat.icon }}</div><h3>{{ cat.title }}</h3></div>
+      {% for item in cat.questions %}
+      <details class="faq">
+        <summary>{{ item.q }}</summary>
+        <div class="faq-body">{{ item.a | markdown | safe }}</div>
+      </details>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
