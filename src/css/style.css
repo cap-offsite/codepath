@@ -321,3 +321,18 @@ section.alt .content-body blockquote{background:var(--white); border-color:var(-
 .content-body details > *:not(summary){margin-top:14px;}
 .content-body ol.steps{counter-reset:step; margin:0; padding:0; list-style:none;}
 .content-body ol li{margin-bottom:6px;}
+
+/* directory */
+.dir-dept{margin-bottom:40px;}
+.dir-dept:last-child{margin-bottom:0;}
+.dir-dept h3{
+  font-size:1.05rem; color:var(--green-dark); text-transform:uppercase; letter-spacing:.06em;
+  border-bottom:1px solid var(--line-light); padding-bottom:10px; margin-bottom:18px;
+}
+section.alt .dir-dept h3{border-bottom-color:var(--sand-deep);}
+.dir-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:18px 24px;
+}
+.dir-person{padding:2px 0;}
+.dir-name{font-weight:600; color:var(--ink); font-size:.98rem;}
+.dir-title{color:var(--ink-soft); font-size:.86rem; margin-top:2px;}
