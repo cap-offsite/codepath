@@ -167,6 +167,29 @@ collections:
                     widget: "markdown"
                     hint: "Use the toolbar for headings, bold, links and lists. To add a collapsible \"click to expand\" block, switch to the code view (</>) and wrap it in <details><summary>Question</summary> ... </details>."
 
+              - label: "Attendee directory"
+                name: "directory"
+                widget: "object"
+                fields:
+                  - { label: "Link target for the nav bar (optional, e.g. directory)", name: "anchorId", widget: "string", required: false }
+                  - { label: "Use the tan/cream background?", name: "altBackground", widget: "boolean", default: false, required: false }
+                  - { label: "Small label above the heading (optional)", name: "kicker", widget: "string", required: false }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Intro text (optional)", name: "intro", widget: "text", required: false }
+                  - label: "Departments"
+                    name: "departments"
+                    widget: "list"
+                    summary: "{{fields.name}}"
+                    fields:
+                      - { label: "Department name", name: "name", widget: "string" }
+                      - label: "People"
+                        name: "people"
+                        widget: "list"
+                        summary: "{{fields.name}}"
+                        fields:
+                          - { label: "Name", name: "name", widget: "string" }
+                          - { label: "Title", name: "title", widget: "string" }
+
               - label: "FAQ"
                 name: "faq"
                 widget: "object"
