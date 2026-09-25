@@ -9,8 +9,7 @@ backend:
   name: github
   repo: cap-offsite/codepath
   branch: main
-  base_url: https://codepath-cms-auth.chelseapeterson.workers.dev
-  
+  base_url: https://codepath-cms-auth.cap-offsite.workers.dev  
 # Where uploaded images are stored in the repo, and the URL path the site
 # serves them from.
 media_folder: "src/images"
