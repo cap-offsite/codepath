@@ -19,11 +19,11 @@ sections:
     badgeText: "Check back here for the latest information. We'll let you know in Slack whenever there's something new to see! #offsite-2026"
     logo: /images/logo-hero.png
     logoLabel: Offsite 2026
-    heading: Our largest CodePath Offsite
-    subtitle: October 13–15, 2026 · **Carefree, Arizona** at CIVANA Wellness Resort & Spa. We're a remote team — this week is about coming together in person to celebrate what we've built, plan what's next, and reconnect as a community.
+    heading: See you in the Sonoran desert.
+    subtitle: We've had a big year at CodePath! Now it's time to celebrate the wins, the people behind them, and everything still ahead. Come recharge, reconnect, and have some fun.
     backgroundImage: /images/hero-background.jpg
-    ctaLabel: Browse the full FAQ
-    ctaLink: '#faq'
+    ctaLabel: Explore the agenda
+    ctaLink: '#agenda'
   - type: quickFacts
     facts:
       - label: Dates
@@ -34,7 +34,7 @@ sections:
         link: https://www.civanacarefree.com/
   - type: gallery
     heading: What's waiting for you at CIVANA
-    intro: Grounds tucked into 20+ acres of Sonoran Desert, plus the pools, food, and spaces you'll get to enjoy while you're there.
+    intro: "We chose CIVANA because it gives us something we don't always get enough of: space to slow down and be together. Set across 20+ acres of Sonoran Desert, the grounds are designed for connection, reflection, and recharging, with plenty of pools, food, and spaces to explore. It felt like the right place to celebrate what we've built and get ready for what's next!"
     linkUrl: https://www.civanacarefree.com/gallery/
     credit: Photos courtesy of CIVANA Wellness Resort & Spa — [see the full gallery](https://www.civanacarefree.com/gallery/).
     images:
@@ -46,7 +46,7 @@ sections:
         alt: Desert garden with cacti and agave at CIVANA
   - type: cardPair
     heading: Your travel days
-    intro: Arrival and departure timing depends on whether you're on the Executive Leadership Team or joining as part of the wider team.
+    intro: Arrival and departure timing likely depends on whether you're on the Extended Leadership Team or joining as part of the wider team.
     anchorId: overview
     altBackground: false
     kicker: Overview
@@ -54,37 +54,37 @@ sections:
     cards:
       - title: ELT
         items:
-          - Arrive **October 12**, around 4:00 PM (hotel check-in)
-          - ELT dinner that evening
-          - Depart **October 15**
+          - Arrive **October 12** PM (hotel check-in from 4:00 PM)
+          - ELT welcome drinks and dinner that evening
+          - '**Depart October 15** unless you have made other plans with your team'
       - title: All other staff
         items:
-          - Arrive **October 13**, around 4:00 PM (hotel check-in)
-          - All-team welcome dinner that evening
-          - Depart **October 15**
+          - Arrive **October 13** (hotel check-in from 4:00 PM)
+          - All-team welcome drinks and dinner that evening
+          - '**Depart October 15** unless you have made other plans with your team'
     notes:
       - title: Arriving early?
-        body: If you're arriving before check-in, you're welcome to make yourself comfortable at the resort. There's space to sit down, get some work done, grab something to eat, or simply hang out and enjoy the property. Resort amenities and classes are also available to you during this time.
+        body: If you're arriving before check-in, you're welcome to make yourself comfortable at the resort. There's space to sit down, get some work done, or simply hang out and enjoy the property. Resort amenities and classes are also available to you during this time. More information on how to access resort amenities will be shared a few days prior to your arrival via email.
       - title: Need flexibility?
         body: We've taken the travel and scheduling needs you shared through your RSVP and flight bookings into account. Whether you're arriving a day early, later, staying an extra day for team time, or simply building in additional travel time, your accommodations have been planned accordingly.
   - type: agenda
     heading: Agenda at a glance
-    intro: A full minute-by-minute schedule is coming closer to the event — here's the shape of the week.
+    intro: A full minute-by-minute schedule is coming closer to the event.
     anchorId: agenda
     altBackground: true
-    kicker: The four days
+    kicker: ''
     days:
       - number: '12'
         date: Monday, October 12
-        title: ELT arrival + dinner
-        body: Executive Leadership Team checks in and kicks off the week together.
+        title: ELT arrivals · Welcome Dinner
+        body: Extended Leadership Team checks in and kicks off the week together.
         eveningTitle: ''
         eveningBody: ''
         note: ''
       - number: '13'
         date: Tuesday, October 13
         title: ELT working session · All-team arrival · Welcome dinner
-        body: ELT continues strategy meetings while the rest of the team checks in during the afternoon, followed by a welcome dinner with the full team.
+        body: ELT convenes for working sessions and activities while the rest of the team arrives and checks in.
         eveningTitle: 'Evening: Mingle Under the Stars — happy hour and dinner'
         eveningBody: Our first night all together! Come get to know your teammates over drinks and a Mediterranean dinner under the Arizona sky. There'll be lawn games, a few get-to-know-you surprises, and plenty of time to just hang out.
         note: '**Before you pack:** add your favorite songs to our [Spotify playlist](https://open.spotify.com/playlist/6LXUS2TSe4A4W3Iu9BbUnJ?si=qu98nQoySceeq5qu-jiA9A&utm_source=copy-link&pi=SJaG3FkxSFiDN&pt=771246325cbe5dbd436a675201139940) so your classics make the list. If yours comes on, go ahead and claim it!'
@@ -94,11 +94,11 @@ sections:
         body: A full day of sessions, team-building activities, and dinner together, and a fun night out on the town!
         eveningTitle: 'Evening: Western Wednesday — happy hour, dinner & a night out at a local saloon'
         eveningBody: "It's theme night! If you have western gear, we want to see it: fringe, boots, cowboy hats, bring 'em out. We'll kick things off with a delicious dinner and drinks, then head to a local saloon for a nightcap and some true Arizona atmosphere."
-        note: The saloon is totally optional. Just so you know, there will be live bull riding that evening. If that's not your thing, we completely understand, and you're welcome to stay back at the resort.
+        note: The saloon is totally optional. Just so you know, the venue will be hosting a live bull riding event that evening. If being around that isn't your thing, we completely understand, and you're welcome to stay back at the resort.
       - number: '15'
         date: Thursday, October 15
         title: Breakfast + wrap-up + departure
-        body: Breakfast, full team gathering, then travel home for both ELT and all staff unless otherwise has been communicated by your team leader.
+        body: Breakfast, full team gathering, then travel home for both ELT and all staff unless otherwise has been communicated within your team.
         eveningTitle: ''
         eveningBody: ''
         note: ''
@@ -114,7 +114,8 @@ sections:
       - Has been booked for you — no action needed. CodePath handles all hotel bookings, and every team member gets their own individual room.
       - No personal card needed at check-in — all incidentals are billed to the CodePath master account. If asked, just remind the front desk of this.
       - Arriving early? The bellman can store your luggage and you can use the resort amenities before check-in — the front desk will text you when your room is ready.
-      - Please don't charge extras (spa, additional food/drinks) to the room — pay directly at the front desk with your own payment method. These aren't reimbursed.
+      - All meals and snacks are covered at CIVANA during the offsite, including breakfast, lunch, dinner, coffee, and refreshments throughout the day.
+      - Please don't charge extras (like spa services) to the room — pay directly at the front desk with your own payment method. These aren't reimbursed.
 
       ### Flights
 
@@ -184,7 +185,7 @@ sections:
 
       Tap the map to open it full size. Room buildings A–D and Saguaro I–V are where most guest rooms are located; the Lobby (★) and Terras restaurant sit centrally on the property.
   - type: content
-    heading: Money matters
+    heading: Expenses
     intro: ''
     anchorId: money
     altBackground: true
@@ -194,8 +195,6 @@ sections:
 
       - **Travel days:** up to $100/day for food, on your virtual Ramp card.
       - **Onsite at CIVANA:** all meals are fully covered by CodePath — no per diem needed.
-
-      Need a meal or snack outside of regular programming — say you land Monday and aren't part of a group dinner? Go ahead and expense it.
 
       <details>
       <summary>Full Ramp & reimbursement details (for reference)</summary>
@@ -301,6 +300,10 @@ sections:
             title: Talent Engagement Coordinator
           - name: Phillip Loya
             title: Technical Recruiter
+      - name: Finance
+        people:
+          - name: Hojae Lee
+            title: Head of Finance
       - name: Product
         people:
           - name: Jeremy Biggs
@@ -351,7 +354,7 @@ sections:
             title: Senior Program Implementation Coordinator
           - name: Stephanie Rosson
             title: Director of Program Operations
-          - name: Tsun Ya (Susie) Liang
+          - name: Susie Liang
             title: Senior Instructional Program Manager
           - name: Valarie Regas
             title: Implementation Manager
@@ -377,10 +380,6 @@ sections:
             title: Director, Regional Development
           - name: Chun Yee Yip
             title: Raise for Good
-      - name: Finance
-        people:
-          - name: Hojae Lee
-            title: Head of Finance
   - type: faq
     heading: Frequently asked questions
     intro: Organized by topic — click any question to expand it. This section will keep growing as more details are confirmed.
@@ -409,8 +408,6 @@ sections:
         questions:
           - q: Can I bring family or guests?
             a: No — the offsite is for CodePath team members only. No additional family members or guests.
-          - q: I have a nursing infant. Can my baby come?
-            a: We completely understand and support the needs of nursing parents.
       - icon: ✈
         title: International travel
         questions:
@@ -438,7 +435,7 @@ sections:
         title: Food & dietary needs
         questions:
           - q: Will meals be covered?
-            a: Yes — all meals onsite at CIVANA are fully covered by CodePath. For meals during travel, use your virtual or physical Ramp card.
+            a: Yes — all meals onsite at CIVANA are fully covered by CodePath. On travel days, you have a per diem of up to $100/day for food on your virtual or physical Ramp card.
           - q: What if I have dietary restrictions or accessibility needs?
             a: Dietary restrictions and accessibility needs have been collected through your RSVP form. If anything has changed since submission, reach out to [offsite2026@codepath.org](mailto:offsite2026@codepath.org).
       - icon: ☀
@@ -480,5 +477,5 @@ footer:
       url: https://www.civanacarefree.com/
   contactEmail: offsite2026@codepath.org
   contactNote: '#offsite-2026 (Slack)'
-  bottomLeft: Built for the CodePath team.
-  bottomRight: Content current as of the latest FAQ update.
+  bottomLeft: ''
+  bottomRight: ''
