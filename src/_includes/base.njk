@@ -71,10 +71,12 @@
       <p>{{ cms.footer.contactNote }}</p>
     </div>
   </div>
+  {% if cms.footer.bottomLeft or cms.footer.bottomRight %}
   <div class="foot-bottom">
     <span>{{ cms.footer.bottomLeft }}</span>
     <span>{{ cms.footer.bottomRight }}</span>
   </div>
+  {% endif %}
 </footer>
 
 </body>
