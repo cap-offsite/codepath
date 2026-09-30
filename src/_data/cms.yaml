@@ -193,8 +193,10 @@ sections:
     body: |-
       ### Per diem
 
-      - **Travel days:** up to $100/day for food, on your virtual Ramp card.
-      - **Onsite at CIVANA:** all meals are fully covered by CodePath — no per diem needed.
+      - **Travel days:** up to $100/day for food, on your virtual or physical Ramp card.
+      - **Onsite at CIVANA:** CIVANA will provide all meals during your stay.
+
+      **Extra food and beverages onsite:** If you need a dietary accommodation or want additional food, snacks, or beverages, you can use your physical or virtual Ramp card to buy them. You can spend up to $50 per day on these extra food and beverage purchases while onsite at the resort. All purchases require a receipt in Ramp, and the memo should say "Purchased additional food/beverage during the 2026 Org Wide Retreat."
 
       <details>
       <summary>Full Ramp & reimbursement details (for reference)</summary>
@@ -457,7 +459,7 @@ sections:
         title: Food & dietary needs
         questions:
           - q: Will meals be covered?
-            a: Yes — all meals onsite at CIVANA are fully covered by CodePath. On travel days, you have a per diem of up to $100/day for food on your virtual or physical Ramp card.
+            a: Yes — CIVANA will provide all meals during your stay. If you need a dietary accommodation or want extra food, snacks, or beverages onsite, you can spend up to $50/day on your Ramp card (see [Expenses](#money) for details). On travel days, you have a per diem of up to $100/day for food on your virtual or physical Ramp card.
           - q: What if I have dietary restrictions or accessibility needs?
             a: Dietary restrictions and accessibility needs have been collected through your RSVP form. If anything has changed since submission, reach out to [offsite2026@codepath.org](mailto:offsite2026@codepath.org).
       - icon: ☀
@@ -489,7 +491,7 @@ sections:
         title: Money & expenses — the fine print
         questions:
           - q: What are the daily per diem rates?
-            a: Up to $100/day for food on travel days, covering breakfast, lunch, and dinner combined. Meals onsite at CIVANA are already fully covered separately.
+            a: Up to $100/day for food on travel days, covering breakfast, lunch, and dinner combined. Onsite, CIVANA provides all meals, and you can spend up to $50/day on extra food and beverages.
 footer:
   logo: /images/logo-footer.png
   tagline: CodePath 2026 Offsite
