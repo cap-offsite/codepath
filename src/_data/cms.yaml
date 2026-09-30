@@ -148,7 +148,7 @@ sections:
       - Business and first class are not typically permitted.
       - Aim for the flight that best fits your schedule at the lowest available fare.
 
-      Need to change a booked flight? Handle cancellations directly with the airline — fees are reimbursed if the change is due to CodePath travel needs, or for a valid personal/business reason with your manager's approval.
+      Need to change or cancel a booked flight? Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org) and cc your manager and Kortney Tibbitts before you rebook, then make the change in Ramp (steps are in the [FAQ](#faq)). Fees are reimbursed if the change is due to CodePath travel needs, or for a valid personal/business reason with your manager's approval.
 
       Questions about your flights or arrival/departure logistics? Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org).
 
@@ -394,6 +394,21 @@ sections:
             a: RSVPs closed on September 10. If you haven't submitted yours, still need to update your details, or have a change in plans, email [offsite2026@codepath.org](mailto:offsite2026@codepath.org) as soon as possible.
           - q: What if I already have time off planned?
             a: Talk to your manager. We'd love to have you there, but we respect time off you've already planned and won't expect you to change it. Please flag any conflicts as early as possible so it can be worked through together.
+          - q: I need to book or change my flight
+            a: |-
+              If your plans change, email [offsite2026@codepath.org](mailto:offsite2026@codepath.org) and cc your manager and Kortney Tibbitts before you rebook. We track flights for shuttle scheduling, so we need to know about any change.
+
+              **To change a flight in Ramp:**
+
+              1. Go to [My travel](https://app.ramp.com/home/travel).
+              2. Select your trip and click the flight booking to open its details.
+              3. Click **Change flight**.
+              4. Select your new dates, origin or destination, and choose a replacement flight.
+              5. Review the fare difference and fund allocation, then confirm.
+
+              If **Change flight** isn't showing (you've already checked in, the flight was previously modified, or it was booked in the last 24 hours), click **Chat now** on the booking details page. If you're departing within 24 hours, call the airline directly.
+
+              **To cancel:** follow the same path, then click **Cancel reservation** or **Cancellation options**. If self-service isn't available, use **Chat with support**.
           - q: Who do I contact with questions?
             a: Email [offsite2026@codepath.org](mailto:offsite2026@codepath.org), or reach out in the dedicated Slack channel.
       - icon: ◆
@@ -468,6 +483,8 @@ sections:
             a: Yes — your first checked bag is covered using your virtual (or physical) Ramp card. A second bag is only reimbursed if you must carry a large amount of supplies for official business, and needs approval before your day of travel.
           - q: What if I need to step out for a meeting?
             a: We understand that the important work of CodePath doesn't pause during the offsite. There are plenty of indoor and outdoor quiet corners to take a call — we ask that you try to minimize this to stay present, but totally understand if something needs your attention.
+          - q: Is there an option to dial in to any offsite sessions?
+            a: No. The offsite is intentionally designed to be fully analog, so there won't be a virtual or dial-in option.
       - icon: $
         title: Money & expenses — the fine print
         questions:
