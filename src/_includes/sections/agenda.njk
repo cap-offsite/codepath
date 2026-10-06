@@ -12,6 +12,21 @@
         <span class="tl-date">{{ day.date }}</span>
         <h3>{{ day.title | markdownInline | safe }}</h3>
         <p>{{ day.body }}</p>
+        {% if day.schedule and day.schedule.length %}
+        <div class="sched">
+          {% for item in day.schedule %}
+          <div class="sched-row{% if item.optional %} sched-optional{% endif %}">
+            <div class="sched-time">{{ item.time }}</div>
+            <div class="sched-what">
+              {% if item.optional %}<span class="sched-tag">Optional</span>{% endif %}
+              <b>{{ item.title | markdownInline | safe }}</b>
+              {% if item.details %}<p>{{ item.details | markdownInline | safe }}</p>{% endif %}
+            </div>
+            <div class="sched-where">{% if item.location %}<span class="sched-lbl">Where: </span>{{ item.location }}{% endif %}</div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
         {% if day.eveningTitle or day.eveningBody %}
         <div style="margin-top:14px;">
           {% if day.eveningTitle %}<p style="font-weight:600; margin-bottom:4px;">{{ day.eveningTitle | markdownInline | safe }}</p>{% endif %}
