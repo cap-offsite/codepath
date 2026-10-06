@@ -139,22 +139,22 @@ sections:
           - time: 7:00 AM
             title: Morning activities
             details: Details will be shared with those who signed up.
-          - time: 9:00–9:45 AM
+          - time: 8:00–10:00 AM
+            title: Headshots
+            details: Sign up for a 10-minute slot (two people per slot), and bring a top you'd like to be photographed in. Sign-up details coming soon.
+            location: Cactus Garden
+            optional: true
+          - time: 9:00 AM
             title: Breakfast
             location: Mesquite
           - time: 10:00 AM
             title: All Hands
             details: Intro & Welcome · CEO Fireside Chat · Interactive Workshop
             location: Mesquite
-          - time: After the session
+          - time: 1:15 PM
             title: Lunch
             details: Served in the room.
             location: Mesquite
-          - time: Time TBA
-            title: Headshots
-            details: Sign up for a slot in groups of 3, and bring a top you'd like to be photographed in. Sign-up details coming soon.
-            location: Cactus Garden
-            optional: true
           - time: 3:00 PM
             title: Afternoon activities
             details: Details will be shared with those who signed up.
@@ -183,11 +183,11 @@ sections:
           - time: 8:00–8:45 AM
             title: Breakfast
             location: Mesquite
-          - time: 9:00 AM
+          - time: 9:00–10:30 AM
             title: All Hands
             details: Takeaways from our time together.
             location: Mesquite
-          - time: ''
+          - time: 11:00 AM
             title: Checkout & shuttles to PHX
             details: Shuttle times will be posted here once they're final.
             location: CIVANA lobby
