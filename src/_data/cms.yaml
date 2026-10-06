@@ -68,40 +68,129 @@ sections:
       - title: Need flexibility?
         body: We've taken the travel and scheduling needs you shared through your RSVP and flight bookings into account. Whether you're arriving a day early, later, staying an extra day for team time, or simply building in additional travel time, your accommodations have been planned accordingly.
   - type: agenda
-    heading: Agenda at a glance
-    intro: A full minute-by-minute schedule is coming closer to the event.
+    heading: Your schedule
+    intro: Where to be and when, day by day. Activity details will be shared directly with everyone who signed up, and you can also join up to 2 resort drop-in classes a day.
     anchorId: agenda
     altBackground: true
     kicker: ''
     days:
       - number: '12'
         date: Monday, October 12
-        title: ELT arrivals · Welcome Dinner
-        body: Extended Leadership Team checks in and kicks off the week together.
+        title: ELT arrivals
+        body: The Extended Leadership Team checks in and kicks off the week together.
         eveningTitle: ''
         eveningBody: ''
         note: ''
+        schedule:
+          - time: 4:00 PM
+            title: Hotel check-in opens
+            details: Arriving early? The bellman can store your bags while you enjoy the resort.
+            location: CIVANA lobby
+          - time: 4:30 PM
+            title: ELT happy hour
+            location: Movement Deck
+          - time: 5:30 PM
+            title: ELT dinner
+            location: Movement Deck
       - number: '13'
         date: Tuesday, October 13
-        title: ELT working session · All-team arrival · Welcome dinner
-        body: ELT convenes for working sessions and activities while the rest of the team arrives and checks in.
-        eveningTitle: 'Evening: Mingle Under the Stars — happy hour and dinner'
-        eveningBody: Our first night all together! Come get to know your teammates over drinks and a Mediterranean dinner under the Arizona sky. There'll be lawn games, a few get-to-know-you surprises, and plenty of time to just hang out.
+        title: ELT working session & all-team arrival
+        body: ELT spends the morning on 2027's biggest bets while the rest of the team travels in. Everyone comes together that evening.
+        eveningTitle: ''
+        eveningBody: ''
         note: '**Before you pack:** add your favorite songs to our [Spotify playlist](https://open.spotify.com/playlist/6LXUS2TSe4A4W3Iu9BbUnJ?si=qu98nQoySceeq5qu-jiA9A&utm_source=copy-link&pi=SJaG3FkxSFiDN&pt=771246325cbe5dbd436a675201139940) so your classics make the list. If yours comes on, go ahead and claim it!'
+        schedule:
+          - time: 7:00 AM
+            title: Morning movement (ELT)
+            details: Join a resort drop-in class (up to 2 a day are included).
+            location: CIVANA class studios
+          - time: 8:00–8:45 AM
+            title: Breakfast (ELT)
+            location: Mesquite
+          - time: 8:45 AM
+            title: ELT BHAGs session
+            location: Mesquite
+          - time: 12:00 PM
+            title: Lunch (ELT)
+            location: Mesquite
+          - time: 2:00 PM
+            title: ELT team activity
+            details: An afternoon activity together as a team. Details coming soon.
+          - time: 4:00 PM
+            title: All-team check-in opens
+            details: Shuttles run from PHX throughout the day.
+            location: CIVANA lobby
+          - time: 5:00 PM
+            title: 'Mingle Under the Stars: happy hour'
+            details: Our first night all together! Drinks and lawn games under the Arizona sky.
+            location: Movement Deck
+          - time: 6:00 PM
+            title: Welcome dinner
+            details: A Mediterranean dinner with the whole team.
+            location: Movement Deck
       - number: '14'
         date: Wednesday, October 14
-        title: Full day of team meetings & team fun
-        body: A full day of sessions, team-building activities, and dinner together, and a fun night out on the town!
-        eveningTitle: 'Evening: Western Wednesday — happy hour, dinner & a night out at a local saloon'
-        eveningBody: "It's theme night! If you have western gear, we want to see it: fringe, boots, cowboy hats, bring 'em out. We'll kick things off with a delicious dinner and drinks, then head to a local saloon for a nightcap and some true Arizona atmosphere."
+        title: All Hands, team fun & Western Wednesday
+        body: Leave knowing where CodePath is headed, the momentum behind us, and what it will take from all of us to exceed our ambitions.
+        eveningTitle: ''
+        eveningBody: ''
         note: The saloon is totally optional. Just so you know, the venue will be hosting a live bull riding event that evening. If being around that isn't your thing, we completely understand, and you're welcome to stay back at the resort.
+        schedule:
+          - time: 7:00 AM
+            title: Morning activities
+            details: Details will be shared with those who signed up.
+          - time: 9:00–9:45 AM
+            title: Breakfast
+            location: Mesquite
+          - time: 10:00 AM
+            title: All Hands
+            details: Intro & Welcome · CEO Fireside Chat · Interactive Workshop
+            location: Mesquite
+          - time: After the session
+            title: Lunch
+            details: Served in the room.
+            location: Mesquite
+          - time: Time TBA
+            title: Headshots
+            details: Sign up for a slot in groups of 3, and bring a top you'd like to be photographed in. Sign-up details coming soon.
+            location: Cactus Garden
+            optional: true
+          - time: 3:00 PM
+            title: Afternoon activities
+            details: Details will be shared with those who signed up.
+          - time: 5:30 PM
+            title: 'Western Wednesday: happy hour'
+            details: "It's theme night! Fringe, boots, cowboy hats: bring 'em out."
+            location: Movement Deck
+          - time: 6:30 PM
+            title: Dinner
+            location: Movement Deck
+          - time: 8:30 PM
+            title: Night out at the saloon (optional)
+            details: Join us for a night out western style! A party bus loops between CIVANA and Buffalo Chip Saloon (about 5 minutes away) until 12:30 AM.
+            location: Bus pickup at CIVANA lobby
       - number: '15'
         date: Thursday, October 15
-        title: Breakfast + wrap-up + departure
-        body: Breakfast, full team gathering, then travel home for both ELT and all staff unless otherwise has been communicated within your team.
+        title: Closing All Hands & departures
+        body: Leave feeling connected to CodePath, our mission and each other, and energized to do the best work of your life.
         eveningTitle: ''
         eveningBody: ''
         note: ''
+        schedule:
+          - time: 6:00 AM
+            title: Morning activities
+            details: Details will be shared with those who signed up.
+          - time: 8:00–8:45 AM
+            title: Breakfast
+            location: Mesquite
+          - time: 9:00 AM
+            title: All Hands
+            details: Takeaways from our time together.
+            location: Mesquite
+          - time: ''
+            title: Checkout & shuttles to PHX
+            details: Shuttle times will be posted here once they're final.
+            location: CIVANA lobby
   - type: content
     heading: Flights, hotel & ground transport
     intro: ''
