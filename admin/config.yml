@@ -152,6 +152,17 @@ collections:
                       - { label: "Evening plans title (optional)", name: "eveningTitle", widget: "string", required: false }
                       - { label: "Evening plans description (optional)", name: "eveningBody", widget: "text", required: false }
                       - { label: "Callout note (optional, supports **bold** and [links](url))", name: "note", widget: "text", required: false }
+                      - label: "Schedule (optional)"
+                        name: "schedule"
+                        widget: "list"
+                        required: false
+                        summary: "{{fields.time}} — {{fields.title}}"
+                        fields:
+                          - { label: "Time (e.g. 8:00–8:45 AM)", name: "time", widget: "string", required: false }
+                          - { label: "What", name: "title", widget: "string" }
+                          - { label: "Details (optional, supports **bold** and [links](url))", name: "details", widget: "text", required: false }
+                          - { label: "Where (optional)", name: "location", widget: "string", required: false }
+                          - { label: "Optional / side-track item? (shown highlighted)", name: "optional", widget: "boolean", default: false, required: false }
 
               - label: "Text block (freeform content)"
                 name: "content"
