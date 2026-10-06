@@ -193,6 +193,22 @@
   .tl-date{color:var(--green-dark); font-weight:600; font-size:.85rem; margin-bottom:2px; display:block;}
   .tl-item p{color:var(--ink-soft); margin-bottom:0;}
 
+  /* agenda schedule rows */
+  .sched{margin-top:14px; background:var(--white); border:1px solid var(--line-light); border-radius:4px; overflow:hidden;}
+  .sched-row{display:grid; grid-template-columns:150px 1fr minmax(150px,220px); gap:4px 18px; padding:13px 18px; border-top:1px solid var(--line-light);}
+  .sched-row:first-child{border-top:0;}
+  .sched-time{font-family:'Space Mono', 'Courier New', monospace; font-weight:700; font-size:.86rem; color:var(--ink); line-height:1.4;}
+  .sched-what b{display:block; font-weight:600; color:var(--ink);}
+  .tl-item .sched-what p{margin-top:2px; font-size:.92rem;}
+  .sched-where{color:var(--ink-soft); font-size:.9rem;}
+  .sched-lbl{display:none;}
+  .sched-optional{background:#eef9f4; box-shadow:inset 3px 0 0 var(--green);}
+  .sched-tag{display:inline-block; font-size:.7rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--green-dark); margin-bottom:2px;}
+  @media (max-width:720px){
+    .sched-row{grid-template-columns:1fr; gap:2px;}
+    .sched-lbl{display:inline; font-weight:600; color:var(--ink);}
+  }
+
   /* steps */
   .steps{counter-reset:step; margin:0; padding:0; list-style:none;}
   .steps li{
