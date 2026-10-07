@@ -11,7 +11,7 @@
         <div class="tl-dot">{{ day.number }}</div>
         <span class="tl-date">{{ day.date }}</span>
         <h3>{{ day.title | markdownInline | safe }}</h3>
-        <p>{{ day.body }}</p>
+        {% if day.body %}<p>{{ day.body }}</p>{% endif %}
         {% if day.schedule and day.schedule.length %}
         <div class="sched">
           {% for item in day.schedule %}
