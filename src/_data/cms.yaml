@@ -6,6 +6,8 @@ site:
   nav:
     - label: Agenda
       anchor: '#agenda'
+    - label: Activities
+      anchor: '#activities'
     - label: Travel
       anchor: '#travel'
     - label: Expenses
