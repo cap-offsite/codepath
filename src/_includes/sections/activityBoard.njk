@@ -1,0 +1,262 @@
+<section id="activities" class="ab-section">
+<style>
+#activity-board{
+  --tan:#EFE6D5; --tan-2:#F7F1E6; --surface:#FFFFFF;
+  --navy:#1B1C57; --muted:#5A6080; --line:#E2D7C2;
+  --green:#0FA47C; --green-soft:#DDF2EA;
+  --rust:#B05A35; --rust-soft:#F6E4D8;
+  --hit:#FBE7A8; --hit-ink:#4A3A00;
+  --mono:'Space Mono',ui-monospace,monospace;
+  --body:'Poppins',system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+}
+#activity-board{background:var(--tan);color:var(--navy);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+#activity-board .ab-wrap{max-width:1000px;margin:0 auto;padding-inline:20px;padding-block:34px 72px}
+#activity-board .ab-eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:10px}
+#activity-board h2{font-family:var(--mono);font-weight:700;font-size:clamp(28px,5.5vw,42px);line-height:1.12;margin:0 0 12px;letter-spacing:-.02em;text-wrap:balance;color:var(--navy)}
+#activity-board .ab-sub{color:var(--muted);max-width:52ch;margin:0;font-size:15.5px}
+#activity-board .ab-notice{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 20px;margin:26px 0 8px}
+#activity-board .ab-notice h3{font-family:var(--body);font-weight:600;font-size:15.5px;margin:0 0 4px;color:var(--navy)}
+#activity-board .ab-notice p{margin:0;font-size:14.5px;color:var(--muted)}
+#activity-board .ab-finder{position:sticky;top:79px;z-index:20;background:var(--tan);padding-block:14px 11px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+#activity-board .ab-finder input{width:100%;font-family:var(--body);font-size:16px;padding:12px 17px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--navy)}
+#activity-board .ab-finder input::placeholder{color:#9AA0B8}
+#activity-board .ab-finder input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft)}
+#activity-board .ab-hint{font-family:var(--body);font-size:13.5px;color:var(--muted);margin-top:9px;min-height:1.3em;padding-inline:3px}
+#activity-board .ab-hint b{font-family:var(--mono);font-size:12.5px;color:var(--green);font-weight:700;letter-spacing:.02em}
+#activity-board .ab-day{margin-top:42px}
+#activity-board .ab-day-label{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--green);letter-spacing:.04em;margin-bottom:3px}
+#activity-board .ab-day h3{font-family:var(--mono);font-size:clamp(20px,3.6vw,27px);font-weight:700;margin:0 0 3px;letter-spacing:-.02em}
+#activity-board .ab-day .ab-note{font-size:14px;color:var(--muted);margin:0 0 6px}
+#activity-board .ab-slot{display:grid;grid-template-columns:62px 1fr;gap:16px;padding-block:20px;position:relative}
+#activity-board .ab-slot::before{content:"";position:absolute;left:30px;top:0;bottom:0;width:2px;background:var(--line)}
+#activity-board .ab-slot:first-of-type::before{top:28px}
+#activity-board .ab-slot:last-of-type::before{bottom:auto;height:28px}
+#activity-board .ab-disc{position:relative;z-index:1;width:62px;height:62px;border-radius:50%;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;flex:none}
+#activity-board .ab-disc .ab-t{font-family:var(--mono);font-weight:700;font-size:15px;color:#fff;line-height:1}
+#activity-board .ab-disc .ab-ap{font-family:var(--mono);font-size:10px;color:var(--green);letter-spacing:.1em;margin-top:3px;font-weight:700}
+#activity-board .ab-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:12px;min-width:0;padding-top:3px}
+#activity-board .ab-card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:15px 16px;min-width:0;display:flex;flex-direction:column;gap:10px}
+#activity-board .ab-card.ab-quiet{background:var(--tan-2);border-style:dashed}
+#activity-board .ab-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+#activity-board .ab-card h4{font-family:var(--mono);font-size:14.5px;font-weight:700;margin:0;letter-spacing:-.01em;line-height:1.25;min-width:0}
+#activity-board .ab-meta{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+#activity-board .ab-num{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--green);line-height:1;font-variant-numeric:tabular-nums;flex:none;text-align:right}
+#activity-board .ab-cap{font-family:var(--mono);font-size:10px;color:var(--muted);text-align:right;margin-top:5px;letter-spacing:.04em}
+#activity-board .ab-tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:4px;align-self:flex-start}
+#activity-board .ab-t-closed{background:var(--rust-soft);color:var(--rust)}
+#activity-board .ab-t-open{background:var(--green-soft);color:var(--green)}
+#activity-board .ab-shots{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin-top:2px}
+#activity-board .ab-shot{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;background:var(--surface);padding:9px 12px}
+#activity-board .ab-shot .ab-st{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--navy);font-variant-numeric:tabular-nums}
+@media (max-width:560px){#activity-board .ab-shot{grid-template-columns:1fr;gap:5px}}
+#activity-board .ab-names{display:flex;flex-wrap:wrap;gap:5px}
+#activity-board .ab-n{font-size:12.5px;padding:3px 9px;border-radius:4px;background:var(--tan-2);color:var(--navy);white-space:nowrap;border:1px solid transparent}
+#activity-board .ab-card.ab-quiet .ab-n{background:var(--surface)}
+#activity-board .ab-n.ab-hit{background:var(--hit);color:var(--hit-ink);font-weight:600;border-color:#E0C96A}
+#activity-board .ab-foot{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+#activity-board .ab-foot a{color:var(--green);font-weight:500}
+@media (max-width:560px){#activity-board .ab-slot{grid-template-columns:48px 1fr;gap:12px}#activity-board .ab-slot::before{left:23px}#activity-board .ab-disc{width:48px;height:48px}#activity-board .ab-disc .ab-t{font-size:12.5px}#activity-board .ab-disc .ab-ap{font-size:8.5px}#activity-board .ab-cards{grid-template-columns:1fr}}
+#activity-board .ab-wrap{max-width:1120px;padding-inline:28px}
+#activity-board h2,#activity-board h3,#activity-board h4{color:var(--navy)}
+#activity-board .ab-foot{margin-top:40px}
+
+</style>
+<div id="activity-board">
+<div class="ab-wrap">
+  <div class="ab-eyebrow">Activities · CIVANA, Carefree AZ</div>
+  <h2>Who's doing what</h2>
+  <p class="ab-sub">Every optional session, who's in it, and where there's still room. Find your name, see where your team landed, and plan around the gaps.</p>
+
+  <div class="ab-notice">
+    <h3>These are final</h3>
+    <p>Your sessions are locked in. If something here is genuinely wrong, or you truly have to revisit it, let the People team know and they'll take a look. Otherwise, this is your week.</p>
+  </div>
+
+  <div class="ab-finder">
+    <input id="ab-find" type="text" placeholder="Find your name" autocomplete="off" spellcheck="false">
+    <div class="ab-hint" id="ab-hint">Ten sessions and your headshot slot. Type two letters of your name.</div>
+  </div>
+
+  <section class="ab-day">
+    <div class="ab-day-label">Tuesday, October 13</div>
+    <h3>Leadership team</h3>
+    <p class="ab-note">The wider team arrives Tuesday afternoon.</p>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">7:00</span><span class="ab-ap">AM</span></div>
+      <div class="ab-cards">
+        <div class="ab-card ab-quiet">
+          <div class="ab-top"><div><h4>Nothing running</h4><div class="ab-meta">Athlete Within was released. CIVANA couldn't find an instructor.</div></div></div>
+          <p class="ab-meta" style="margin:0">Brian, Geneva, Michael and Perry, this hour is yours. The resort includes two drop-in classes a day if you'd rather book something.</p>
+          <div class="ab-names"><span class="ab-n">Brian Madigan</span><span class="ab-n">Geneva Scott</span><span class="ab-n">Michael Ellison</span><span class="ab-n">Perry Nunes</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">2:00</span><span class="ab-ap">PM</span></div>
+      <div class="ab-cards">
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>The Summit High Ropes</h4><div class="ab-meta">90–120 min</div></div><div><div class="ab-num">6</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-open">4 spaces</span>
+          <div class="ab-names"><span class="ab-n">Alisa Avelar</span><span class="ab-n">Brian Madigan</span><span class="ab-n">Mike Wales</span><span class="ab-n">Quinton Ma</span><span class="ab-n">Rachel Boroditsky</span><span class="ab-n">Sar Champagne Bielert</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Sound Healing</h4><div class="ab-meta">50 min</div></div><div><div class="ab-num">6</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-open">4 spaces</span>
+          <div class="ab-names"><span class="ab-n">Geneva Scott</span><span class="ab-n">Juliette Ramberg de Ruyter</span><span class="ab-n">Madison McCormick</span><span class="ab-n">Michael Ellison</span><span class="ab-n">Nicholas DePaul</span><span class="ab-n">Perry Nunes</span></div>
+        </div>
+        <div class="ab-card ab-quiet">
+          <div class="ab-top"><div><h4>Personal / work time</h4><div class="ab-meta">nothing booked</div></div><div><div class="ab-num">6</div></div></div>
+          <div class="ab-names"><span class="ab-n">Chris Coleman</span><span class="ab-n">Fredrik Håård</span><span class="ab-n">Hojae Lee</span><span class="ab-n">Jude Kenny</span><span class="ab-n">Mike Boyle</span><span class="ab-n">Omar Ahmed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-day">
+    <div class="ab-day-label">Wednesday, October 14</div>
+    <h3>Everyone</h3>
+    <p class="ab-note">Breakfast 9:00, All Hands 10:00, lunch 1:15, Western Wednesday from 5:30.</p>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">7:00</span><span class="ab-ap">AM</span></div>
+      <div class="ab-cards">
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Beginner Hike</h4><div class="ab-meta">1.5 hrs · back by 8:30</div></div><div><div class="ab-num">27</div><div class="ab-cap">OF 26</div></div></div>
+          <span class="ab-tag ab-t-closed">Closed</span>
+          <div class="ab-names"><span class="ab-n">Cam Flowers</span><span class="ab-n">Diana Muratova</span><span class="ab-n">Diogo Botelho</span><span class="ab-n">Doug Bergman</span><span class="ab-n">Erica Holloway</span><span class="ab-n">Fredrik Håård</span><span class="ab-n">Jason Tham</span><span class="ab-n">Jeremy Biggs</span><span class="ab-n">Katelyn Kasperowicz</span><span class="ab-n">Kristoffer Nordström</span><span class="ab-n">Lisa White</span><span class="ab-n">Lucy Caffrey-Maffei</span><span class="ab-n">Michael Ellison</span><span class="ab-n">Mike Boyle</span><span class="ab-n">Mike Dane</span><span class="ab-n">Mike Wales</span><span class="ab-n">Omar Ahmed</span><span class="ab-n">Perry Nunes</span><span class="ab-n">Phillip Loya</span><span class="ab-n">Rachel Boroditsky</span><span class="ab-n">Rick Benavidez</span><span class="ab-n">Salif Tankoano</span><span class="ab-n">Sarah Perry</span><span class="ab-n">Stephanie Rosson</span><span class="ab-n">Susie Liang</span><span class="ab-n">Victoria Angulo</span><span class="ab-n">Yuliya Spektorsky</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Restorative Yoga</h4><div class="ab-meta">60 min</div></div><div><div class="ab-num">12</div><div class="ab-cap">OF 12</div></div></div>
+          <span class="ab-tag ab-t-closed">Closed</span>
+          <div class="ab-names"><span class="ab-n">Aliyah Payton</span><span class="ab-n">Anna Kim Pham</span><span class="ab-n">Gabby Moreno</span><span class="ab-n">Gazina Ali</span><span class="ab-n">Geneva Scott</span><span class="ab-n">Jude Kenny</span><span class="ab-n">Katy Richardson</span><span class="ab-n">Kuhu Sharma</span><span class="ab-n">Nashira Williams</span><span class="ab-n">Nicholas DePaul</span><span class="ab-n">Sar Champagne Bielert</span><span class="ab-n">Valarie Regas</span></div>
+        </div>
+        <div class="ab-card ab-quiet">
+          <div class="ab-top"><div><h4>Personal / work time</h4><div class="ab-meta">nothing booked</div></div><div><div class="ab-num">13</div></div></div>
+          <div class="ab-names"><span class="ab-n">Alisa Avelar</span><span class="ab-n">Brian Madigan</span><span class="ab-n">Chris Coleman</span><span class="ab-n">Hojae Lee</span><span class="ab-n">Jayna Menard</span><span class="ab-n">Joel Fluette</span><span class="ab-n">Juliette Ramberg de Ruyter</span><span class="ab-n">Kelly Mosher</span><span class="ab-n">Ko Kim</span><span class="ab-n">Madison McCormick</span><span class="ab-n">Quinton Ma</span><span class="ab-n">Terry Randolph</span><span class="ab-n">Yelesah Haseley</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">8:00</span><span class="ab-ap">AM</span></div>
+      <div class="ab-cards" style="grid-template-columns:1fr">
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Headshots</h4><div class="ab-meta">Cactus Garden · Lee Media · 8:00 to 9:50 · three at a time, about ten minutes each</div></div><div><div class="ab-num">33</div><div class="ab-cap">OF 33</div></div></div>
+          <span class="ab-tag ab-t-closed">Full</span>
+          <p class="ab-meta" style="margin:0">Slots are ordered around the morning activities, so hikers are later and anyone free early goes first. Bring the shirt you'd want on LinkedIn.</p>
+          <div class="ab-shots">
+            <div class="ab-shot" data-label="Wednesday 8:00am headshot"><span class="ab-st">8:00</span><span class="ab-names"><span class="ab-n">Alisa Avelar</span><span class="ab-n">Chris Coleman</span><span class="ab-n">Juliette Ramberg de Ruyter</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 8:10am headshot"><span class="ab-st">8:10</span><span class="ab-names"><span class="ab-n">Kelly Mosher</span><span class="ab-n">Ko Kim</span><span class="ab-n">Madison McCormick</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 8:20am headshot"><span class="ab-st">8:20</span><span class="ab-names"><span class="ab-n">Aliyah Payton</span><span class="ab-n">Anna Kim Pham</span><span class="ab-n">Yelesah Haseley</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 8:30am headshot"><span class="ab-st">8:30</span><span class="ab-names"><span class="ab-n">Gabby Moreno</span><span class="ab-n">Gazina Ali</span><span class="ab-n">Quinton Ma</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 8:40am headshot"><span class="ab-st">8:40</span><span class="ab-names"><span class="ab-n">Geneva Scott</span><span class="ab-n">Katy Richardson</span><span class="ab-n">Kuhu Sharma</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 8:50am headshot"><span class="ab-st">8:50</span><span class="ab-names"><span class="ab-n">Nashira Williams</span><span class="ab-n">Nicholas DePaul</span><span class="ab-n">Sar Champagne Bielert</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 9:00am headshot"><span class="ab-st">9:00</span><span class="ab-names"><span class="ab-n">Diana Muratova</span><span class="ab-n">Diogo Botelho</span><span class="ab-n">Valarie Regas</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 9:10am headshot"><span class="ab-st">9:10</span><span class="ab-names"><span class="ab-n">Doug Bergman</span><span class="ab-n">Katelyn Kasperowicz</span><span class="ab-n">Lucy Caffrey-Maffei</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 9:20am headshot"><span class="ab-st">9:20</span><span class="ab-names"><span class="ab-n">Michael Ellison</span><span class="ab-n">Mike Boyle</span><span class="ab-n">Mike Dane</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 9:30am headshot"><span class="ab-st">9:30</span><span class="ab-names"><span class="ab-n">Mike Wales</span><span class="ab-n">Omar Ahmed</span><span class="ab-n">Perry Nunes</span></span></div>
+            <div class="ab-shot" data-label="Wednesday 9:40am headshot"><span class="ab-st">9:40</span><span class="ab-names"><span class="ab-n">Phillip Loya</span><span class="ab-n">Rick Benavidez</span><span class="ab-n">Yuliya Spektorsky</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">3:00</span><span class="ab-ap">PM</span></div>
+      <div class="ab-cards">
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Pickleball</h4><div class="ab-meta">60 min · 16 on court, players rotate</div></div><div><div class="ab-num">20</div><div class="ab-cap">OF 19</div></div></div>
+          <span class="ab-tag ab-t-closed">Closed</span>
+          <div class="ab-names"><span class="ab-n">Aliyah Payton</span><span class="ab-n">Alisa Avelar</span><span class="ab-n">Anna Kim Pham</span><span class="ab-n">Brian Madigan</span><span class="ab-n">Cam Flowers</span><span class="ab-n">Chris Coleman</span><span class="ab-n">Diogo Botelho</span><span class="ab-n">Gabby Moreno</span><span class="ab-n">Jeremy Biggs</span><span class="ab-n">Jude Kenny</span><span class="ab-n">Lucy Caffrey-Maffei</span><span class="ab-n">Michael Ellison</span><span class="ab-n">Mike Boyle</span><span class="ab-n">Mike Dane</span><span class="ab-n">Mike Wales</span><span class="ab-n">Omar Ahmed</span><span class="ab-n">Salif Tankoano</span><span class="ab-n">Susie Liang</span><span class="ab-n">Terry Randolph</span><span class="ab-n">Victoria Angulo</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Vinyasa Flow</h4><div class="ab-meta">60 min</div></div><div><div class="ab-num">11</div><div class="ab-cap">OF 12</div></div></div>
+          <span class="ab-tag ab-t-open">1 space</span>
+          <div class="ab-names"><span class="ab-n">Doug Bergman</span><span class="ab-n">Gazina Ali</span><span class="ab-n">Geneva Scott</span><span class="ab-n">Jason Tham</span><span class="ab-n">Joel Fluette</span><span class="ab-n">Kelly Mosher</span><span class="ab-n">Lisa White</span><span class="ab-n">Rachel Boroditsky</span><span class="ab-n">Stephanie Rosson</span><span class="ab-n">Valarie Regas</span><span class="ab-n">Yuliya Spektorsky</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Cacao Ceremony</h4><div class="ab-meta">75–90 min · appreciation circle</div></div><div><div class="ab-num">7</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-open">3 spaces</span>
+          <div class="ab-names"><span class="ab-n">Diana Muratova</span><span class="ab-n">Jayna Menard</span><span class="ab-n">Juliette Ramberg de Ruyter</span><span class="ab-n">Ko Kim</span><span class="ab-n">Madison McCormick</span><span class="ab-n">Nashira Williams</span><span class="ab-n">Perry Nunes</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Ecstatic Dance</h4><div class="ab-meta">60 min</div></div><div><div class="ab-num">2</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-open">8 spaces</span>
+          <div class="ab-names"><span class="ab-n">Sar Champagne Bielert</span><span class="ab-n">Sarah Perry</span></div>
+        </div>
+        <div class="ab-card ab-quiet">
+          <div class="ab-top"><div><h4>Personal / work time</h4><div class="ab-meta">nothing booked</div></div><div><div class="ab-num">12</div></div></div>
+          <div class="ab-names"><span class="ab-n">Erica Holloway</span><span class="ab-n">Fredrik Håård</span><span class="ab-n">Hojae Lee</span><span class="ab-n">Katelyn Kasperowicz</span><span class="ab-n">Katy Richardson</span><span class="ab-n">Kristoffer Nordström</span><span class="ab-n">Kuhu Sharma</span><span class="ab-n">Nicholas DePaul</span><span class="ab-n">Phillip Loya</span><span class="ab-n">Quinton Ma</span><span class="ab-n">Rick Benavidez</span><span class="ab-n">Yelesah Haseley</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ab-day">
+    <div class="ab-day-label">Thursday, October 15</div>
+    <h3>Departure day</h3>
+    <p class="ab-note">Breakfast 8:00, closing All Hands 9:00 to 10:30, checkout at 11:00.</p>
+
+    <div class="ab-slot">
+      <div class="ab-disc"><span class="ab-t">6:00</span><span class="ab-ap">AM</span></div>
+      <div class="ab-cards">
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>The Summit High Ropes</h4><div class="ab-meta">90–120 min</div></div><div><div class="ab-num">10</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-closed">Full</span>
+          <div class="ab-names"><span class="ab-n">Anna Kim Pham</span><span class="ab-n">Diogo Botelho</span><span class="ab-n">Doug Bergman</span><span class="ab-n">Jeremy Biggs</span><span class="ab-n">Joel Fluette</span><span class="ab-n">Kristoffer Nordström</span><span class="ab-n">Mike Boyle</span><span class="ab-n">Mike Dane</span><span class="ab-n">Valarie Regas</span><span class="ab-n">Yelesah Haseley</span></div>
+        </div>
+        <div class="ab-card">
+          <div class="ab-top"><div><h4>Yin Yoga</h4><div class="ab-meta">60 min</div></div><div><div class="ab-num">6</div><div class="ab-cap">OF 10</div></div></div>
+          <span class="ab-tag ab-t-open">4 spaces</span>
+          <div class="ab-names"><span class="ab-n">Diana Muratova</span><span class="ab-n">Gabby Moreno</span><span class="ab-n">Jayna Menard</span><span class="ab-n">Kuhu Sharma</span><span class="ab-n">Madison McCormick</span><span class="ab-n">Sarah Perry</span></div>
+        </div>
+        <div class="ab-card ab-quiet">
+          <div class="ab-top"><div><h4>Everyone else</h4><div class="ab-meta">nothing booked</div></div></div>
+          <p class="ab-meta" style="margin:0">If you're not in one of the two above, Thursday morning is yours until breakfast at 8:00.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ab-foot">
+    <div>Not running: Morning Soul Flow, Labyrinth Walk, Yoga Sculpt, Strike + Sweat, Cardio HIIT, Intention Burning and Athlete Within.</div>
+    <div>A session marked closed is at the number CIVANA is holding for us.</div>
+  </div>
+</div>
+
+
+</div>
+<script>
+(function(){
+  var input=document.getElementById('ab-find');
+  var hint=document.getElementById('ab-hint');
+  var chips=Array.prototype.slice.call(document.querySelectorAll('#activity-board .ab-n'));
+  var base=hint.innerHTML;
+  function run(){
+    var q=input.value.trim().toLowerCase();
+    var found=[];
+    chips.forEach(function(c){
+      var on = q.length>1 && c.textContent.toLowerCase().indexOf(q)!==-1;
+      c.classList.toggle('ab-hit',on);
+      if(on){
+        var shot=c.closest('.ab-shot');
+        if(shot){ found.push('<b>'+shot.getAttribute('data-label')+'</b>'); return; }
+        var card=c.closest('.ab-card'), slot=c.closest('.ab-slot'), day=c.closest('.ab-day');
+        if(card&&slot&&day){
+          var t=slot.querySelector('.ab-disc .ab-t').textContent;
+          var ap=slot.querySelector('.ab-disc .ab-ap').textContent.toLowerCase();
+          var d=day.querySelector('.ab-day-label').textContent.split(',')[0];
+          found.push('<b>'+d+' '+t+ap+'</b> '+card.querySelector('h4').textContent);
+        }
+      }
+    });
+    if(q.length<2){ hint.innerHTML=base; return; }
+    hint.innerHTML = found.length ? found.join(' &nbsp;·&nbsp; ') : 'No match for "'+input.value.trim()+'".';
+  }
+  input.addEventListener('input',run);
+})();
+</script>
+</section>
