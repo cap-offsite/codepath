@@ -526,6 +526,8 @@ sections:
         questions:
           - q: Where exactly is the offsite?
             a: '[CIVANA Wellness Resort & Spa](https://www.civanacarefree.com/) in Carefree, Arizona — just outside Phoenix/Scottsdale. 37220 Mule Train Road, Carefree, AZ 85377.'
+          - q: Will I need a card at hotel check-in?
+            a: Yes. CIVANA will take a card at check-in for incidentals. Feel free to use your Ramp card for this. Your room itself is covered by CodePath.
           - q: What if I arrive early or have downtime — is there anything to do?
             a: Absolutely. CIVANA has a wide range of outdoor spaces to relax in, plus a full daily schedule of wellness classes you can sign up for anytime. When you arrive, CIVANA will email you a personal link to book classes.
           - q: Can I join drop-in wellness classes, or use the spa?
